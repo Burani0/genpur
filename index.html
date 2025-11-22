@@ -489,10 +489,252 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Top Bar Styles */
+.top-bar {
+    background: linear-gradient(90deg, #ff6b35 0%, #ff8c42 100%);
+    color: #fff;
+    padding: 8px 0;
+    font-size: 13px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1031;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar .container-fluid {
+    padding: 0 30px;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.top-bar-item {
+    color: #fff;
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.top-bar-item i {
+    margin-right: 6px;
+    color: #ffd700;
+    font-size: 14px;
+}
+
+.top-bar-right {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-social-links {
+    display: flex;
+    gap: 8px;
+}
+
+.top-social-links a {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.top-social-links a i {
+    color: #fff;
+    font-size: 16px;
+}
+
+.top-social-links a:first-child {
+    background-color: #1877f2; /* Facebook blue */
+}
+
+.top-social-links a:nth-child(2) {
+    background-color: #e4405f; /* Instagram gradient approximation */
+}
+
+.top-social-links a:last-child {
+    background-color: #1da1f2; /* Twitter blue */
+}
+
+.top-social-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust navbar position to account for top bar */
+.navbar {
+    margin-top: 48px;
+}
+
+/* Adjust body margin */
+body {
+    margin-top: 73px; /* Top bar + navbar height */
+}
+
+@media (min-width: 768px) {
+    body {
+        margin-top: 113px; /* Adjusted for desktop */
+    }
+}
+
+/* Responsive adjustments for top bar */
+@media (max-width: 991px) {
+    .top-bar-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .top-bar-item {
+        margin-right: 0;
+        margin-bottom: 3px;
+    }
+    
+    .top-bar {
+        padding: 10px 0;
+    }
+    
+    .navbar {
+        margin-top: 80px;
+    }
+    
+    body {
+        margin-top: 105px;
+    }
+}
+
+@media (max-width: 767px) {
+    .top-bar-left {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    .top-bar-right {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .top-bar .row {
+        flex-direction: column;
+    }
+    
+    .top-bar-item {
+        font-size: 12px;
+    }
+    
+    .top-bar {
+        position: relative;
+    }
+    
+    .navbar {
+        margin-top: 0;
+    }
+    
+    body {
+        margin-top: 25px;
+    }
+}
+
+/* Get Involved Button */
+.btn-get-involved {
+    background: linear-gradient(90deg, #ff6b35 0%, #ff8c42 100%);
+    color: #fff !important;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-get-involved:hover {
+    background: linear-gradient(90deg, #ff8c42 0%, #ff6b35 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+    color: #fff !important;
+}
+
+/* Navbar adjustments */
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 5px;
+}
+
+/* Simple Fade Transition */
+.carousel-fade .carousel-item {
+    transition: opacity 1.2s ease-in-out;
+}
+
+.carousel-fade .carousel-inner .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .carousel-item.active,
+.carousel-fade .carousel-inner .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-inner .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .carousel-item-next,
+.carousel-fade .carousel-inner .carousel-item-prev,
+.carousel-fade .carousel-inner .carousel-item.active.carousel-item-left,
+.carousel-fade .carousel-inner .carousel-item.active.carousel-item-right {
+    left: 0;
+    transform: translate3d(0, 0, 0);
+}
     </style>
 </head>
 
 <body>
+
+    <!-- Top Bar -->
+<div class="top-bar">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-9 top-bar-left">
+                <span class="top-bar-item">
+                    <i class="fa fa-envelope"></i> info@genpur.org
+                </span>
+                <span class="top-bar-item">
+                    <i class="fa fa-phone"></i> +256 746 701 314
+                </span>
+                <span class="top-bar-item">
+                    <i class="fa fa-map-marker"></i> Amuru Town Council, Gulu
+                </span>
+            </div>
+            <div class="col-md-3 top-bar-right">
+                <div class="top-social-links">
+                    <a href="#" title="Facebook" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" title="Instagram" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="#" title="Twitter" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <nav class="navbar navbar-expand-md bg-light fixed-top navbar-default">
 
         <div class="container">
@@ -520,6 +762,10 @@
                     <li class="nav-item">
                         <a class="navbar-link" href="sports.html">Sports / Coaching Boys into Men</a>
                     </li>
+
+                    <li class="nav-item">
+                    <a href="#contact" class="btn btn-get-involved">Get Involved</a>
+                </li>
                 </ul>
        
             </div>  
@@ -527,7 +773,7 @@
         <!-- /.container -->
 </nav>
 <section id="home">
-    <div class="carousel slide" id="MagicCarousel" data-ride="carousel">
+    <div class="carousel slide carousel-fade" id="MagicCarousel" data-ride="carousel" data-interval="3000">
         <div class="carousel-inner" role="listbox">
             <ol class="carousel-indicators">
                 <li class="active" data-target="#MagicCarousel" data-slide-to="0"></li>
