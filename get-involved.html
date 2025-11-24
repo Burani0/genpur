@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get Involved - GenPur CBO</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Source+Sans+Pro:400,700" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        /* Get Involved Page Specific Styles */
+        .page-header {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .page-header h1 {
+            color: white;
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            color: white;
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Support Categories Section */
+        .support-categories {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        .section-title .underline {
+            width: 80px;
+            height: 4px;
+            background: #7bc143;
+            margin: 0 auto 20px;
+        }
+
+        .category-card {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-card h3 {
+            color: #0066cc;
+            font-size: 24px;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .category-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .category-card ul li {
+            padding: 15px 0;
+            font-size: 16px;
+            color: #555;
+            text-align: center;
+        }
+
+        .category-card ul li:last-child {
+            padding-bottom: 0;
+        }
+
+        /* Join Us Section */
+        .join-us-section {
+            background: url('../getinvolved1.jpg') center center;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .join-us-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(2px);
+        }
+
+        .join-us-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .join-us-section h2 {
+            color: white;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .join-us-section p {
+            color: white;
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+
+        /* Donation Section */
+        .donation-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .donation-content {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .donation-form {
+            padding: 50px;
+        }
+
+        .donation-form h2 {
+            font-size: 32px;
+            color: #0066cc;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .form-control {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 12px 15px;
+            font-size: 15px;
+        }
+
+        .form-control:focus {
+            border-color: #0066cc;
+            box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15);
+        }
+
+        /* Style placeholder options */
+        select.form-control option[value=""] {
+            color: #999;
+        }
+
+        select.form-control {
+            color: #555;
+            height: auto;
+            min-height: 48px;
+            line-height: 1.5;
+            padding: 12px 15px;
+        }
+
+        select.form-control:invalid {
+            color: #999;
+        }
+
+        .donation-image {
+            background: url('../getinvolved2,jpg.jpg') center center;
+            background-size: cover;
+            min-height: 500px;
+            position: relative;
+        }
+
+        .donation-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 102, 204, 0.15);
+        }
+
+        .btn-donate {
+            background: linear-gradient(135deg, #7bc143 0%, #5fa32d 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(123, 193, 67, 0.3);
+        }
+
+        .btn-donate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(123, 193, 67, 0.4);
+            color: white;
+        }
+
+        @media (max-width: 991px) {
+            .donation-image {
+                min-height: 300px;
+            }
+
+            .page-header {
+                margin-top: 80px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .page-header {
+                padding: 60px 0 40px;
+                margin-top: 0;
+            }
+
+            .page-header h1 {
+                font-size: 32px;
+            }
+
+            .donation-form {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Get Involved Button - Keep it green on this page */
+        .btn-get-involved {
+            background: #7bc143 !important;
+            color: #fff !important;
+            padding: 6px 18px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 13px;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(123, 193, 67, 0.3);
+        }
+
+        .btn-get-involved:hover {
+            background: #5fa32d !important;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(123, 193, 67, 0.4);
+            color: #fff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-9 top-bar-left">
+                    <span class="top-bar-item">
+                        <i class="fa fa-envelope"></i> info@genpur.org
+                    </span>
+                    <span class="top-bar-item">
+                        <i class="fa fa-phone"></i> +256 746 701 314
+                    </span>
+                    <span class="top-bar-item">
+                        <i class="fa fa-map-marker"></i> Amuru Town Council, Gulu
+                    </span>
+                </div>
+                <div class="col-md-3 top-bar-right">
+                    <div class="top-social-links">
+                        <a href="#" title="Facebook" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" title="Instagram" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" title="Twitter" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md bg-light fixed-top navbar-default">
+        <div class="container">
+            <a href="index.html"><img class="logo navbar-brand image-responsive" src="img/1000475511.jpg" alt="Logo" style="border-radius: 90px;"></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-navicon"></i>
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="navbar-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="education.html">Child Education Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="household.html">Household Strengthening & Wellbeing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="livelihood.html">Livelihood & Economic Empowerment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="sports.html">Sports / Coaching Boys into Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="btn btn-get-involved">Get Involved</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Make a Difference Today</h1>
+            <p>Your support transforms lives in our community. Join us in creating lasting change through education, health, economic empowerment, and sports development.</p>
+        </div>
+    </section>
+
+    <!-- Support Categories -->
+    <section class="support-categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ways to Support Our Programs</h2>
+                <div class="underline"></div>
+                <p style="color: #7a7c82; max-width: 700px; margin: 0 auto;">
+                    We welcome both financial and in-kind donations to support our four core program areas. Your contribution directly impacts lives in Amuru.
+                </p>
+            </div>
+
+            <div class="row">
+                <!-- Child Education Support -->
+                <div class="col-md-6 mb-4">
+                    <div class="category-card">
+                        <h3>Child Education Support</h3>
+                        <ul>
+                            <li>School Fees & Tuition</li>
+                            <li>Textbooks & Learning Materials</li>
+                            <li>School Uniforms & Stationery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Household Strengthening & Wellbeing -->
+                <div class="col-md-6 mb-4">
+                    <div class="category-card">
+                        <h3>Household Wellbeing</h3>
+                        <ul>
+                            <li>Nutritious Food Packages</li>
+                            <li>Health & Hygiene Supplies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Livelihood & Economic Empowerment -->
+                <div class="col-md-6 mb-4">
+                    <div class="category-card">
+                        <h3>Economic Empowerment</h3>
+                        <ul>
+                            <li>Vocational Training Support</li>
+                            <li>Small Business Kits</li>
+                            <li>Agricultural Tools & Seeds</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sports / Coaching Boys into Men -->
+                <div class="col-md-6 mb-4">
+                    <div class="category-card">
+                        <h3>Sports & Youth Development</h3>
+                        <ul>
+                            <li>Sports Equipment & Kits</li>
+                            <li>Balls/Nets/Training Gear</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section class="join-us-section">
+        <div class="container">
+            <h2>Join Us in Creating Lasting Impact</h2>
+            <p>
+                Are you passionate about transforming lives and empowering communities? Do you believe in the power of education,
+                health, economic opportunity, and positive mentorship? Together, we can build a future where every child has access
+                to quality education, every family thrives with dignity, and every young person reaches their full potential.
+                Your partnership with GenPur CBO makes this vision a reality. Join us today!
+            </p>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation-section" id="contact">
+        <div class="container">
+            <div class="donation-content">
+                <div class="row no-gutters">
+                    <div class="col-lg-6">
+                        <div class="donation-form">
+                            <h2>Support GenPur</h2>
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="donationType">Donation Type</label>
+                                    <select class="form-control" id="donationType" required>
+                                        <option value="" disabled selected>Select donation type</option>
+                                        <option>Financial Donation</option>
+                                        <option>In-Kind Donation</option>
+                                        <option>Monthly Sponsorship</option>
+                                        <option>Volunteer Services</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="programArea">Program Area (Optional)</label>
+                                    <select class="form-control" id="programArea">
+                                        <option value="" selected>Select program (optional)</option>
+                                        <option>All Programs</option>
+                                        <option>Child Education Support</option>
+                                        <option>Household Wellbeing</option>
+                                        <option>Economic Empowerment</option>
+                                        <option>Sports & Youth Development</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="donorName">Full Name</label>
+                                    <input type="text" class="form-control" id="donorName" placeholder="Enter your name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="donorEmail">Email Address</label>
+                                    <input type="email" class="form-control" id="donorEmail" placeholder="your@email.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="donorPhone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="donorPhone" placeholder="+256 XXX XXX XXX">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message (Optional)</label>
+                                    <textarea class="form-control" id="message" rows="3" placeholder="Tell us more about your contribution..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-donate">
+                                    Submit
+                                </button>
+                            </form>
+
+                            <div class="mt-4 text-center">
+                                <p style="color: #7a7c82; margin-bottom: 10px;">
+                                    <strong>Contact Us:</strong>
+                                </p>
+                                <p style="color: #7a7c82; font-size: 14px; margin-bottom: 5px;">
+                                    <i class="fa fa-phone" style="color: #0066cc;"></i> +256 746 701 314
+                                </p>
+                                <p style="color: #7a7c82; font-size: 14px; margin-bottom: 5px;">
+                                    <i class="fa fa-envelope" style="color: #0066cc;"></i> info@genpur.org
+                                </p>
+                                <p style="color: #7a7c82; font-size: 14px;">
+                                    <i class="fa fa-map-marker" style="color: #0066cc;"></i> Amuru Town Council, Gulu
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="donation-image"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/1000475511.jpg" alt="GenPur Logo" class="footer-logo">
+                    <p>GenPur CBO is dedicated to improving lives through education, health, economic empowerment, and sports development in Amuru District.</p>
+                </div>
+
+                <div class="col-md-4 footer-menu">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Child Education</a></li>
+                        <li><a href="household.html">Household Wellbeing</a></li>
+                        <li><a href="livelihood.html">Economic Empowerment</a></li>
+                        <li><a href="sports.html">Sports Development</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-menu">
+                    <h4>Connect With Us</h4>
+                    <p><i class="fa fa-phone"></i> +256 746 701 314</p>
+                    <p><i class="fa fa-envelope"></i> info@genpur.org</p>
+                    <p><i class="fa fa-map-marker"></i> Amuru Town Council, Gulu</p>
+
+                    <div class="footer-social-icons">
+                        <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <p>&copy; 2025 GenPur CBO. All Rights Reserved. | Empowering Communities in Amuru District</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery, Popper, Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        // Smooth scroll for anchor links
+        $(document).ready(function(){
+            $('a[href*="#"]').on('click', function(e) {
+                if(this.hash !== '') {
+                    e.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 100
+                    }, 800);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

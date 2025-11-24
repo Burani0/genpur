@@ -3,6 +3,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!--for icons-->
    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     
@@ -30,20 +32,22 @@
         }
 
         .pillars-section .main-title {
-            color: #5a1a5a;
+            color: #0066cc;
             font-size: 42px;
             font-weight: bold;
             text-align: center;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
+            font-family: 'Roboto', sans-serif;
         }
 
         .pillars-section .subtitle {
-            color: #ff9800;
+            color: #7bc143;
             font-size: 24px;
             text-align: center;
             margin-bottom: 30px;
+            font-family: 'Open Sans', sans-serif;
         }
 
         .pillars-section .description {
@@ -71,8 +75,8 @@
         .pillar-icon img {
             width: 100%;
             height: 100%;
-            fill: #ff7043;
-            color: #ff7043;
+            fill: #0066cc;
+            color: #0066cc;
         }
 
         .pillar-title {
@@ -95,7 +99,7 @@
         }
 
         .read-more-link {
-            color: #5a1a5a;
+            color: #0066cc;
             font-weight: 600;
             text-decoration: none;
             font-size: 15px;
@@ -103,7 +107,7 @@
         }
 
         .read-more-link:hover {
-            color: #ff7043;
+            color: #7bc143;
             text-decoration: underline;
         }
 
@@ -114,18 +118,18 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #8b4040, #a34545);
+            background: linear-gradient(135deg, #0066cc, #0052a3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0,102,204,0.3);
             transition: all 0.3s ease;
         }
 
         .scroll-top-btn:hover {
-            background: linear-gradient(135deg, #a34545, #8b4040);
+            background: linear-gradient(135deg, #0052a3, #0066cc);
             transform: translateY(-3px);
         }
 
@@ -141,11 +145,12 @@
         }
 
         .impact-section .section-title {
-            color: #5a1a5a;
+            color: #0066cc;
             font-size: 42px;
             font-weight: bold;
             text-align: center;
             margin-bottom: 60px;
+            font-family: 'Roboto', sans-serif;
         }
 
         .impact-card {
@@ -164,12 +169,13 @@
         }
 
         .impact-category {
-            color: #ff7043;
+            color: #7bc143;
             font-size: 24px;
             font-weight: bold;
             text-align: center;
             margin-bottom: 25px;
             text-transform: capitalize;
+            font-family: 'Open Sans', sans-serif;
         }
 
         .impact-number {
@@ -224,19 +230,19 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #8b4040, #a34545);
+            background: linear-gradient(135deg, #0066cc, #0052a3);
             border-radius: 50%;
             display: none;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0,102,204,0.3);
             transition: all 0.3s ease;
             z-index: 1000;
         }
 
         .scroll-top-btn:hover {
-            background: linear-gradient(135deg, #a34545, #8b4040);
+            background: linear-gradient(135deg, #0052a3, #0066cc);
             transform: translateY(-3px);
         }
 
@@ -251,10 +257,11 @@
         }
 
         .about-title {
-            color: #ff7043;
+            color: #0066cc;
             font-size: 48px;
             font-weight: bold;
             margin-bottom: 30px;
+            font-family: 'Roboto', sans-serif;
         }
 
         .about-description {
@@ -321,20 +328,19 @@
     object-position: center;
 }
 
-/* Carousel Caption Positioning - Centered Vertically and Horizontally */
+/* Carousel Caption Positioning - Bottom Aligned */
 .carousel-caption {
     position: absolute;
-    top: 50%;
+    bottom: 80px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    bottom: auto;
+    transform: translateX(-50%);
     right: auto;
     width: 80%;
     text-align: center;
 }
 
 .carousel-caption h1 {
-    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 20px 30px;
     border-radius: 8px;
     display: inline-block;
@@ -346,14 +352,15 @@
     .carousel-item {
         height: 400px;
     }
-    
+
     .carousel-caption h1 {
         font-size: 24px !important;
         padding: 15px 20px;
     }
-    
+
     .carousel-caption {
         width: 90%;
+        bottom: 40px;
     }
 }
 
@@ -361,10 +368,14 @@
     .carousel-item {
         height: 300px;
     }
-    
+
     .carousel-caption h1 {
         font-size: 18px !important;
         padding: 10px 15px;
+    }
+
+    .carousel-caption {
+        bottom: 30px;
     }
 }
 
@@ -411,10 +422,9 @@
 /* Carousel Caption Positioning */
 .carousel-caption {
     position: absolute;
-    top: 50%;
+    bottom: 80px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    bottom: auto;
+    transform: translateX(-50%);
     right: auto;
     width: 80%;
     text-align: center;
@@ -425,14 +435,15 @@
     .carousel-item {
         height: 400px;
     }
-    
+
     .carousel-caption h1 {
         font-size: 24px !important;
         padding: 15px 20px;
     }
-    
+
     .carousel-caption {
         width: 90%;
+        bottom: 40px;
     }
 }
 
@@ -440,10 +451,14 @@
     .carousel-item {
         height: 300px;
     }
-    
+
     .carousel-caption h1 {
         font-size: 18px !important;
         padding: 10px 15px;
+    }
+
+    .carousel-caption {
+        bottom: 30px;
     }
 }
 
@@ -492,7 +507,7 @@
 
 /* Top Bar Styles */
 .top-bar {
-    background: linear-gradient(90deg, #ff6b35 0%, #ff8c42 100%);
+    background: linear-gradient(90deg, #0066cc 0%, #0052a3 100%);
     color: #fff;
     padding: 8px 0;
     font-size: 13px;
@@ -580,12 +595,12 @@
 
 /* Adjust body margin */
 body {
-    margin-top: 73px; /* Top bar + navbar height */
+    margin-top: 65px; /* Top bar + navbar height */
 }
 
 @media (min-width: 768px) {
     body {
-        margin-top: 113px; /* Adjusted for desktop */
+        margin-top: 100px; /* Adjusted for desktop */
     }
 }
 
@@ -649,21 +664,23 @@ body {
 
 /* Get Involved Button */
 .btn-get-involved {
-    background: linear-gradient(90deg, #ff6b35 0%, #ff8c42 100%);
+    background: #7bc143;
     color: #fff !important;
-    padding: 10px 25px;
+    padding: 6px 18px;
     border-radius: 5px;
     font-weight: 600;
-    margin-left: 15px;
+    font-size: 13px;
+    margin-left: 10px;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
+    box-shadow: 0 2px 5px rgba(123, 193, 67, 0.3);
 }
 
 .btn-get-involved:hover {
-    background: linear-gradient(90deg, #ff8c42 0%, #ff6b35 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+    background: #5fa32d;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(123, 193, 67, 0.4);
     color: #fff !important;
 }
 
@@ -673,7 +690,7 @@ body {
 }
 
 .navbar-nav .nav-item {
-    margin: 0 5px;
+    margin: 0 2px;
 }
 
 /* Simple Fade Transition */
@@ -764,7 +781,7 @@ body {
                     </li>
 
                     <li class="nav-item">
-                    <a href="#contact" class="btn btn-get-involved">Get Involved</a>
+                    <a href="get-involved.html" class="btn btn-get-involved">Get Involved</a>
                 </li>
                 </ul>
        
@@ -773,7 +790,7 @@ body {
         <!-- /.container -->
 </nav>
 <section id="home">
-    <div class="carousel slide carousel-fade" id="MagicCarousel" data-ride="carousel" data-interval="3000">
+    <div class="carousel slide carousel-fade" id="MagicCarousel" data-ride="carousel" data-interval="2000">
         <div class="carousel-inner" role="listbox">
             <ol class="carousel-indicators">
                 <li class="active" data-target="#MagicCarousel" data-slide-to="0"></li>
@@ -860,16 +877,69 @@ Through community, stakeholders involvement and  system strengthening, GenPur in
                 <div class="col-md-6 col-lg-3">
                     <div class="pillar-card">
                         <div class="pillar-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                                <g fill="#ff7043">
-                                    <!-- Books stack -->
-                                    <rect x="18" y="35" width="28" height="4" rx="1"/>
-                                    <rect x="18" y="40" width="28" height="4" rx="1"/>
-                                    <rect x="18" y="45" width="28" height="4" rx="1"/>
-                                    <!-- Open book -->
-                                    <path d="M32 20 L32 32 L44 30 L44 18 Z"/>
-                                    <path d="M32 20 L32 32 L20 30 L20 18 Z"/>
-                                    <path d="M20 18 L32 20 L44 18 L32 16 Z"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+                                <g>
+                                    <!-- Stacked Books -->
+                                    <!-- Book 3 (top) -->
+                                    <g>
+                                        <path d="M 40 20 L 100 15 L 105 18 L 105 28 L 100 31 L 40 36 L 35 33 L 35 23 Z" fill="#0066cc" stroke="#0066cc" stroke-width="2"/>
+                                        <path d="M 100 15 L 105 18 L 105 28 L 100 31 Z" fill="#004d99" stroke="#0066cc" stroke-width="1.5"/>
+                                        <line x1="40" y1="20" x2="40" y2="36" stroke="#fff" stroke-width="1.5"/>
+                                        <line x1="43" y1="21" x2="43" y2="36" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
+                                        <line x1="46" y1="21" x2="46" y2="35" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
+                                        <line x1="49" y1="21" x2="49" y2="35" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
+                                    </g>
+
+                                    <!-- Book 2 (middle) -->
+                                    <g>
+                                        <path d="M 38 36 L 98 31 L 103 34 L 103 44 L 98 47 L 38 52 L 33 49 L 33 39 Z" fill="#0066cc" stroke="#0066cc" stroke-width="2"/>
+                                        <path d="M 98 31 L 103 34 L 103 44 L 98 47 Z" fill="#004d99" stroke="#0066cc" stroke-width="1.5"/>
+                                        <line x1="38" y1="36" x2="38" y2="52" stroke="#fff" stroke-width="1.5"/>
+                                        <line x1="41" y1="37" x2="41" y2="52" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
+                                        <line x1="44" y1="37" x2="44" y2="51" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
+                                        <line x1="47" y1="37" x2="47" y2="51" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
+                                    </g>
+
+                                    <!-- Book 1 (bottom of stack) -->
+                                    <g>
+                                        <path d="M 36 52 L 96 47 L 101 50 L 101 60 L 96 63 L 36 68 L 31 65 L 31 55 Z" fill="#0066cc" stroke="#0066cc" stroke-width="2"/>
+                                        <path d="M 96 47 L 101 50 L 101 60 L 96 63 Z" fill="#004d99" stroke="#0066cc" stroke-width="1.5"/>
+                                        <line x1="36" y1="52" x2="36" y2="68" stroke="#fff" stroke-width="1.5"/>
+                                        <line x1="39" y1="53" x2="39" y2="68" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
+                                        <line x1="42" y1="53" x2="42" y2="67" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
+                                        <line x1="45" y1="53" x2="45" y2="67" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
+                                    </g>
+
+                                    <!-- Open Book -->
+                                    <g>
+                                        <!-- Left page -->
+                                        <path d="M 25 75 Q 24 72 28 70 L 65 70 Q 68 71 70 75 L 70 118 Q 69 120 65 120 L 28 120 Q 24 119 25 115 Z" fill="#e6f2ff" stroke="#0066cc" stroke-width="2.5"/>
+                                        <!-- Page lines -->
+                                        <line x1="32" y1="78" x2="63" y2="78" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="32" y1="83" x2="63" y2="83" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="32" y1="88" x2="63" y2="88" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="32" y1="93" x2="63" y2="93" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="32" y1="98" x2="63" y2="98" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="32" y1="103" x2="63" y2="103" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="32" y1="108" x2="63" y2="108" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="32" y1="113" x2="63" y2="113" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+
+                                        <!-- Right page -->
+                                        <path d="M 115 75 Q 116 72 112 70 L 75 70 Q 72 71 70 75 L 70 118 Q 71 120 75 120 L 112 120 Q 116 119 115 115 Z" fill="#e6f2ff" stroke="#0066cc" stroke-width="2.5"/>
+                                        <!-- Page lines -->
+                                        <line x1="77" y1="78" x2="108" y2="78" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="77" y1="83" x2="108" y2="83" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="77" y1="88" x2="108" y2="88" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="77" y1="93" x2="108" y2="93" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="77" y1="98" x2="108" y2="98" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="77" y1="103" x2="108" y2="103" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="77" y1="108" x2="108" y2="108" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+                                        <line x1="77" y1="113" x2="108" y2="113" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
+
+                                        <!-- Center binding -->
+                                        <ellipse cx="70" cy="73" rx="3" ry="2" fill="#0066cc"/>
+                                        <line x1="70" y1="75" x2="70" y2="118" stroke="#0066cc" stroke-width="2.5"/>
+                                    </g>
                                 </g>
                             </svg>
                         </div>
@@ -886,7 +956,7 @@ Through community, stakeholders involvement and  system strengthening, GenPur in
                     <div class="pillar-card">
                         <div class="pillar-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                                <g fill="#ff7043">
+                                <g fill="#0066cc">
                                     <!-- Medical cross in hands -->
                                     <path d="M32 20 L36 20 L36 28 L44 28 L44 32 L36 32 L36 40 L28 40 L28 32 L20 32 L20 28 L28 28 L28 20 L32 20 Z"/>
                                     <!-- Hands -->
@@ -911,7 +981,7 @@ Supporting families to build resilience and stability. Promote health, nutrition
                     <div class="pillar-card">
                         <div class="pillar-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                                <g fill="#ff7043">
+                                <g fill="#0066cc">
                                     <!-- Earth/Globe -->
                                     <circle cx="28" cy="32" r="16" fill="none" stroke="#ff7043" stroke-width="2"/>
                                     <ellipse cx="28" cy="32" rx="7" ry="16" fill="none" stroke="#ff7043" stroke-width="2"/>
@@ -939,20 +1009,28 @@ Supporting families to build resilience and stability. Promote health, nutrition
                 <div class="col-md-6 col-lg-3">
                     <div class="pillar-card">
                         <div class="pillar-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                                <g fill="#ff7043">
-                                    <!-- Person playing sports -->
-                                    <circle cx="32" cy="20" r="6"/>
-                                    <path d="M26 28 L32 26 L38 28 L38 36 Q38 38 36 38 L28 38 Q26 38 26 36 Z"/>
-                                    <path d="M26 36 L22 46 L26 48 L28 38"/>
-                                    <path d="M38 36 L42 46 L38 48 L36 38"/>
-                                    <!-- Arms raised -->
-                                    <path d="M26 30 L20 24 L22 22 L28 28"/>
-                                    <path d="M38 30 L44 24 L42 22 L36 28"/>
-                                    <!-- Ball -->
-                                    <circle cx="32" cy="12" r="4" fill="none" stroke="#ff7043" stroke-width="1.5"/>
-                                    <path d="M30 8 Q32 10 34 8" fill="none" stroke="#ff7043" stroke-width="1"/>
-                                    <path d="M28 12 L36 12" stroke="#ff7043" stroke-width="1"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
+                                <g fill="#0066cc">
+                                    <!-- Ball above -->
+                                    <circle cx="50" cy="15" r="8" fill="#0066cc"/>
+
+                                    <!-- Head -->
+                                    <circle cx="50" cy="40" r="10" fill="#0066cc"/>
+
+                                    <!-- Body/Torso -->
+                                    <path d="M 50 50 L 45 55 L 40 75 L 45 78 L 50 78 L 55 78 L 60 75 L 55 55 Z" fill="#0066cc"/>
+
+                                    <!-- Left arm raised -->
+                                    <path d="M 45 52 L 38 45 L 30 35 L 25 30 L 22 32 L 20 38 L 25 42 L 35 48 L 42 53 Z" fill="#0066cc"/>
+
+                                    <!-- Right arm raised -->
+                                    <path d="M 55 52 L 62 45 L 70 35 L 75 30 L 78 32 L 80 38 L 75 42 L 65 48 L 58 53 Z" fill="#0066cc"/>
+
+                                    <!-- Left leg -->
+                                    <path d="M 42 78 L 38 90 L 35 105 L 33 110 L 36 112 L 40 110 L 43 100 L 46 85 Z" fill="#0066cc"/>
+
+                                    <!-- Right leg -->
+                                    <path d="M 58 78 L 62 90 L 65 105 L 67 110 L 64 112 L 60 110 L 57 100 L 54 85 Z" fill="#0066cc"/>
                                 </g>
                             </svg>
                         </div>
@@ -979,9 +1057,9 @@ Teach discipline, teamwork, respect, and positive masculinity.
                 <div class="col-md-6 col-lg-3">
                     <div class="impact-card">
                         <h3 class="impact-category">Child Education Support</h3>
-                        <div class="impact-number">100%</div>
+                        <div class="impact-number">15</div>
                         <p class="impact-description">
-                            Transition from Primary to Secondary School Enrollment, school attendance, learning outcomes and transition to higher education.
+                            Pupils Sponsored with Education
                         </p>
                     </div>
                 </div>
@@ -990,9 +1068,9 @@ Teach discipline, teamwork, respect, and positive masculinity.
                 <div class="col-md-6 col-lg-3">
                     <div class="impact-card">
                         <h3 class="impact-category">Household Strengthening & Wellbeing</h3>
-                        <div class="impact-number">1,000</div>
+                        <div class="impact-number">300</div>
                         <p class="impact-description">
-                            Women & Children reached through Maternal & child health Projects/Interventions
+                            Caregivers Reached with Positive Parenting
                         </p>
                     </div>
                 </div>
@@ -1032,20 +1110,9 @@ Teach discipline, teamwork, respect, and positive masculinity.
                     </div>
                 </div>
 
-                <!-- Household Strengthening & Wellbeing - Second Metric -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="impact-card">
-                        <div class="impact-number">20</div>
-                        <p class="impact-description">
-                            Community Health Projects Through health & nutrition Projects reducing mortality & morbidity.
-                        </p>
-                    </div>
-                </div>
-
                 <!-- Livelihood & Economic Empowerment - Second Metric -->
                 <div class="col-md-6 col-lg-3">
                     <div class="impact-card">
-                        <div class="impact-number">200,000</div>
                         <p class="impact-description">
                             Trees planted and Grown in subcounties or serving communities
                         </p>
@@ -1111,52 +1178,29 @@ Teach discipline, teamwork, respect, and positive masculinity.
 <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4 ">
+                <!-- Connect With Us -->
+                <div class="col-md-4">
                     <div>
                         <a href="index.html">
                             <img class="footer-logo" src="img/1000475511.jpg" alt="logo">
-                        </a><br>
-                        <!-- <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" class="fixed"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>. -->
+                        </a>
                     </div>
-                <div class="text-left footer1-social-container">
-                    <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a href="#" title="Google-plus" target="_blank"><i class="fa fa-google-plus"></i></a>
-                    <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <!-- <a href="#" title="Behance" target="_blank"><i class="fa fa-behance"></i></a>
-                    <a href="#" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a> -->
-                    <a href="#" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a>
-                    <!-- <a href="#" title="Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a> -->
-                </div>    
-                </div>
-                <div class="col-md-4 footer-menu">
-                    <h4>CONTACT US</h4>
-                    <div>
-                        <address class="margin-bottom-30">
-                            <p>Amuru Town Council
+                    <h4>CONNECT WITH US</h4>
+                    <p><i class="fa fa-phone"></i> +256 746 701 314</p>
+                    <p><i class="fa fa-envelope"></i> info@genpur.org</p>
+                    <p><i class="fa fa-map-marker"></i> Amuru Town Council<br/>Gulu<br/>Uganda</p>
 
-                        <br/>Gulu
-                        <br/>Uganda</p>
-                        </address>
+                    <div class="footer-social-icons">
+                        <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
                     </div>
-                    <div class="margin-bottom-10">
-                        <p><i class="fa fa-phone"></i> 2560746701314
-                            <br/>
-                            <!-- <i class="fa fa-fax"></i> +91 526 808054</p> -->
-                    </div>
-                    <div>
-                        <a href="#">www.genpur.org
-</a>
-                        <br/>
-                        <a href="mailto:#">info@genpur.org
-</a>
-                    </div>
-                    </div>
-                <div class="col-md-4  footer-menu">
+                </div>
+
+                <!-- Our Programs -->
+                <div class="col-md-4 footer-menu">
                     <h4>OUR PROGRAMS</h4>
                     <ul>
-                        <a href="index.html">
-                            <li>Home</li>
-                        </a>
                         <a href="education.html">
                             <li>Child Education Support</li>
                         </a>
@@ -1172,7 +1216,31 @@ Teach discipline, teamwork, respect, and positive masculinity.
                     </ul>
                 </div>
 
+                <!-- Quick Links -->
+                <div class="col-md-4 footer-menu">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <a href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="#about">
+                            <li>About Us</li>
+                        </a>
+                        <a href="get-involved.html">
+                            <li>Get Involved</li>
+                        </a>
+                        <a href="#contact">
+                            <li>Contact Us</li>
+                        </a>
+                    </ul>
+                </div>
+
             </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-copyright">
+            <p>© 2024 GenPur Community Based Organization. All rights reserved.</p>
         </div>
     </footer>
 
