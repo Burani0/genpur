@@ -4,7 +4,7 @@
     <!--for icons-->
    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     
@@ -69,6 +69,21 @@
             width: 120px;
             height: 120px;
             margin: 0 auto 25px;
+            background: #7bc143;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .pillar-card:hover .pillar-icon {
+            transform: scale(1.1);
+        }
+
+        .pillar-icon i {
+            font-size: 60px;
+            color: white;
         }
 
         .pillar-icon svg,
@@ -340,11 +355,11 @@
 }
 
 .carousel-caption h1 {
-    background-color: rgba(255, 255, 255, 0.85);
+    color: #fff !important;
+    font-weight: 900;
     padding: 20px 30px;
-    border-radius: 8px;
     display: inline-block;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 /* Responsive adjustments */
@@ -381,11 +396,11 @@
 
 /* Carousel Caption Animation */
 .carousel-caption h1 {
-    background-color: rgba(255, 255, 255, 0.85);
+    color: #fff !important;
+    font-weight: 900;
     padding: 20px 30px;
-    border-radius: 8px;
     display: inline-block;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     overflow: hidden;
 }
 
@@ -393,6 +408,7 @@
     display: inline-block;
     opacity: 0;
     animation: letterReveal 0.1s forwards;
+    color: #fff !important;
 }
 
 @keyframes letterReveal {
@@ -877,71 +893,7 @@ Through community, stakeholders involvement and  system strengthening, GenPur in
                 <div class="col-md-6 col-lg-3">
                     <div class="pillar-card">
                         <div class="pillar-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
-                                <g>
-                                    <!-- Stacked Books -->
-                                    <!-- Book 3 (top) -->
-                                    <g>
-                                        <path d="M 40 20 L 100 15 L 105 18 L 105 28 L 100 31 L 40 36 L 35 33 L 35 23 Z" fill="#0066cc" stroke="#0066cc" stroke-width="2"/>
-                                        <path d="M 100 15 L 105 18 L 105 28 L 100 31 Z" fill="#004d99" stroke="#0066cc" stroke-width="1.5"/>
-                                        <line x1="40" y1="20" x2="40" y2="36" stroke="#fff" stroke-width="1.5"/>
-                                        <line x1="43" y1="21" x2="43" y2="36" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
-                                        <line x1="46" y1="21" x2="46" y2="35" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
-                                        <line x1="49" y1="21" x2="49" y2="35" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
-                                    </g>
-
-                                    <!-- Book 2 (middle) -->
-                                    <g>
-                                        <path d="M 38 36 L 98 31 L 103 34 L 103 44 L 98 47 L 38 52 L 33 49 L 33 39 Z" fill="#0066cc" stroke="#0066cc" stroke-width="2"/>
-                                        <path d="M 98 31 L 103 34 L 103 44 L 98 47 Z" fill="#004d99" stroke="#0066cc" stroke-width="1.5"/>
-                                        <line x1="38" y1="36" x2="38" y2="52" stroke="#fff" stroke-width="1.5"/>
-                                        <line x1="41" y1="37" x2="41" y2="52" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
-                                        <line x1="44" y1="37" x2="44" y2="51" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
-                                        <line x1="47" y1="37" x2="47" y2="51" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
-                                    </g>
-
-                                    <!-- Book 1 (bottom of stack) -->
-                                    <g>
-                                        <path d="M 36 52 L 96 47 L 101 50 L 101 60 L 96 63 L 36 68 L 31 65 L 31 55 Z" fill="#0066cc" stroke="#0066cc" stroke-width="2"/>
-                                        <path d="M 96 47 L 101 50 L 101 60 L 96 63 Z" fill="#004d99" stroke="#0066cc" stroke-width="1.5"/>
-                                        <line x1="36" y1="52" x2="36" y2="68" stroke="#fff" stroke-width="1.5"/>
-                                        <line x1="39" y1="53" x2="39" y2="68" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
-                                        <line x1="42" y1="53" x2="42" y2="67" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
-                                        <line x1="45" y1="53" x2="45" y2="67" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
-                                    </g>
-
-                                    <!-- Open Book -->
-                                    <g>
-                                        <!-- Left page -->
-                                        <path d="M 25 75 Q 24 72 28 70 L 65 70 Q 68 71 70 75 L 70 118 Q 69 120 65 120 L 28 120 Q 24 119 25 115 Z" fill="#e6f2ff" stroke="#0066cc" stroke-width="2.5"/>
-                                        <!-- Page lines -->
-                                        <line x1="32" y1="78" x2="63" y2="78" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="32" y1="83" x2="63" y2="83" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="32" y1="88" x2="63" y2="88" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="32" y1="93" x2="63" y2="93" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="32" y1="98" x2="63" y2="98" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="32" y1="103" x2="63" y2="103" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="32" y1="108" x2="63" y2="108" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="32" y1="113" x2="63" y2="113" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-
-                                        <!-- Right page -->
-                                        <path d="M 115 75 Q 116 72 112 70 L 75 70 Q 72 71 70 75 L 70 118 Q 71 120 75 120 L 112 120 Q 116 119 115 115 Z" fill="#e6f2ff" stroke="#0066cc" stroke-width="2.5"/>
-                                        <!-- Page lines -->
-                                        <line x1="77" y1="78" x2="108" y2="78" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="77" y1="83" x2="108" y2="83" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="77" y1="88" x2="108" y2="88" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="77" y1="93" x2="108" y2="93" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="77" y1="98" x2="108" y2="98" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="77" y1="103" x2="108" y2="103" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="77" y1="108" x2="108" y2="108" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-                                        <line x1="77" y1="113" x2="108" y2="113" stroke="#0066cc" stroke-width="0.8" opacity="0.5"/>
-
-                                        <!-- Center binding -->
-                                        <ellipse cx="70" cy="73" rx="3" ry="2" fill="#0066cc"/>
-                                        <line x1="70" y1="75" x2="70" y2="118" stroke="#0066cc" stroke-width="2.5"/>
-                                    </g>
-                                </g>
-                            </svg>
+                            <i class="fa fa-graduation-cap"></i>
                         </div>
                         <h3 class="pillar-title">Child Education Support</h3>
                         <p class="pillar-description">
@@ -955,17 +907,7 @@ Through community, stakeholders involvement and  system strengthening, GenPur in
                 <div class="col-md-6 col-lg-3">
                     <div class="pillar-card">
                         <div class="pillar-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                                <g fill="#0066cc">
-                                    <!-- Medical cross in hands -->
-                                    <path d="M32 20 L36 20 L36 28 L44 28 L44 32 L36 32 L36 40 L28 40 L28 32 L20 32 L20 28 L28 28 L28 20 L32 20 Z"/>
-                                    <!-- Hands -->
-                                    <path d="M16 32 Q14 36 16 42 L20 45 L20 38 Z"/>
-                                    <path d="M48 32 Q50 36 48 42 L44 45 L44 38 Z"/>
-                                    <path d="M20 45 L16 48 Q14 50 16 52 L22 50 Z"/>
-                                    <path d="M44 45 L48 48 Q50 50 48 52 L42 50 Z"/>
-                                </g>
-                            </svg>
+                            <i class="fa fa-home"></i>
                         </div>
                         <h3 class="pillar-title">Household Strengthening & Wellbeing</h3>
                         <p class="pillar-description">
@@ -980,19 +922,7 @@ Supporting families to build resilience and stability. Promote health, nutrition
                 <div class="col-md-6 col-lg-3">
                     <div class="pillar-card">
                         <div class="pillar-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                                <g fill="#0066cc">
-                                    <!-- Earth/Globe -->
-                                    <circle cx="28" cy="32" r="16" fill="none" stroke="#ff7043" stroke-width="2"/>
-                                    <ellipse cx="28" cy="32" rx="7" ry="16" fill="none" stroke="#ff7043" stroke-width="2"/>
-                                    <line x1="12" y1="32" x2="44" y2="32" stroke="#ff7043" stroke-width="2"/>
-                                    <line x1="28" y1="16" x2="28" y2="48" stroke="#ff7043" stroke-width="2"/>
-                                    <!-- Thermometer -->
-                                    <rect x="48" y="18" width="4" height="20" rx="2"/>
-                                    <circle cx="50" cy="42" r="5"/>
-                                    <line x1="50" y1="22" x2="50" y2="37" stroke="white" stroke-width="1.5"/>
-                                </g>
-                            </svg>
+                            <i class="fa fa-briefcase"></i>
                         </div>
                         <h3 class="pillar-title">Livelihood & Economic Empowerment</h3>
                         <p class="pillar-description">
@@ -1009,36 +939,14 @@ Supporting families to build resilience and stability. Promote health, nutrition
                 <div class="col-md-6 col-lg-3">
                     <div class="pillar-card">
                         <div class="pillar-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
-                                <g fill="#0066cc">
-                                    <!-- Ball above -->
-                                    <circle cx="50" cy="15" r="8" fill="#0066cc"/>
-
-                                    <!-- Head -->
-                                    <circle cx="50" cy="40" r="10" fill="#0066cc"/>
-
-                                    <!-- Body/Torso -->
-                                    <path d="M 50 50 L 45 55 L 40 75 L 45 78 L 50 78 L 55 78 L 60 75 L 55 55 Z" fill="#0066cc"/>
-
-                                    <!-- Left arm raised -->
-                                    <path d="M 45 52 L 38 45 L 30 35 L 25 30 L 22 32 L 20 38 L 25 42 L 35 48 L 42 53 Z" fill="#0066cc"/>
-
-                                    <!-- Right arm raised -->
-                                    <path d="M 55 52 L 62 45 L 70 35 L 75 30 L 78 32 L 80 38 L 75 42 L 65 48 L 58 53 Z" fill="#0066cc"/>
-
-                                    <!-- Left leg -->
-                                    <path d="M 42 78 L 38 90 L 35 105 L 33 110 L 36 112 L 40 110 L 43 100 L 46 85 Z" fill="#0066cc"/>
-
-                                    <!-- Right leg -->
-                                    <path d="M 58 78 L 62 90 L 65 105 L 67 110 L 64 112 L 60 110 L 57 100 L 54 85 Z" fill="#0066cc"/>
-                                </g>
-                            </svg>
+                            <i class="fa fa-trophy"></i>
                         </div>
                         <h3 class="pillar-title">Sports / Coaching Boys into Men</h3>
                         <p class="pillar-description">
                             We guide boys to grow into responsible, compassionate men who uplift their communities.
 Use sports as a tool for mentorship and character building.    
 Teach discipline, teamwork, respect, and positive masculinity.
+4 clubs supported with CBIM.
                         </p>
                         <a href="sports.html" class="read-more-link">Read more</a>
                     </div>
@@ -1090,9 +998,9 @@ Teach discipline, teamwork, respect, and positive masculinity.
                 <div class="col-md-6 col-lg-3">
                     <div class="impact-card">
                         <h3 class="impact-category">Sports / Coaching Boys into Men</h3>
-                        <div class="impact-number">12</div>
+                        <div class="impact-number">4</div>
                         <p class="impact-description">
-                            Community Sports Events
+                            Clubs supported with CBIM
                         </p>
                     </div>
                 </div>
@@ -1103,7 +1011,7 @@ Teach discipline, teamwork, respect, and positive masculinity.
                 <!-- Child Education Support - Second Metric -->
                 <div class="col-md-6 col-lg-3">
                     <div class="impact-card">
-                        <div class="impact-number">200</div>
+                        <div class="impact-number">50</div>
                         <p class="impact-description">
                             Adolescent girls Retained in school
                         </p>
@@ -1132,43 +1040,68 @@ Teach discipline, teamwork, respect, and positive masculinity.
         </div>
     </section>
 
+    <!-- Background Image Section -->
+    <section class="glass-background-section">
+        <div class="glass-overlay">
+            <div class="container">
+                <div class="mission-text-overlay">
+                    <h2>Mission</h2>
+                    <p>To empower community by fostering participation in social and economic development activities, aimed at improving the quality of life in underserved areas of Uganda. We strive to create programs that inspire collaboration, resilience and upward mobility for all.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Scroll to top button -->
     <div class="scroll-top-btn" onclick="scrollToTop()">
         <i class="fa fa-arrow-up"></i>
     </div>
     
-    <!--contact us-->
-    <section class="page-section" id="contact">
+    <!-- Donate Section -->
+    <section class="page-section donate-section" id="contact">
         <div class="container">
-            <div class="row ">
-
-                <div class="col-md-8">
-                    <h2 class="title-section"><span class="title-regular">CONTACT</span><br/>US</h2>
-                    <hr class="title-underline " />
+            <div class="row align-items-center">
+                <!-- Donation Form -->
+                <div class="col-lg-6">
+                    <h2 class="title-section"><span class="title-regular">DONATE TO</span><br/>GENPUR CBO</h2>
+                    <hr class="title-underline" />
                     <p>
-                        Any suggestion or comment is most welcome. Feel free to message us.
+                        Your generous contribution helps us transform lives and empower communities in Amuru District. Every donation makes a difference.
                     </p>
+
                     <div class="form-group">
-                        <input type="text" class="form-control" id="usr" placeholder="NAME">
+                        <label for="donationAmount">Donation Amount</label>
+                        <div class="donation-amount-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" class="form-control donation-input" id="donationAmount" placeholder="560">
+                            <span class="currency-label">USD</span>
+                        </div>
                     </div>
+
                     <div class="form-group">
-                        <input type="text" class="form-control" id="email" placeholder="EMAIL">
+                        <label for="donorName">Name of Donor</label>
+                        <input type="text" class="form-control donor-name-input" id="donorName" placeholder="">
                     </div>
-                    <div class="form-group">
-                        <textarea class="form-control" rows="5" id="message" placeholder="MESSAGE"></textarea>
-                    </div>
-                    <button type="button" class="btn btn-default">SEND <i class="fa fa-envelope"></i></button>
+
+                    <!-- PayPal Button -->
+                    <button type="button" class="btn btn-paypal">
+                        <i class="fa fa-paypal"></i> PayPal
+                    </button>
+
+                    <!-- Checkout Button -->
+                    <button type="button" class="btn btn-checkout">
+                        Checkout
+                    </button>
                 </div>
-                <div class="col-md-4">
-                    <h3>Mission</h3>
-                    <p>To empower community by fostering participation in social and economic development activities, aimed at improving the quality of life in underserved areas of Uganda. We strive to create programs that inspire collaboration, ressilience and upward mobility for all.</p>
-                    <p><strong>Address:</strong>
-                        <br/>Amuru Town Council
-                        <br/>Gulu
-                        <br/>Uganda</p>
-                    <p><strong>Phone:</strong> +2560746701314</p>
-                    
-                    <p><strong>Business Hours:</strong> 08:00hrs to 18:30hrs EAT</p>
+
+                <!-- Donation Video -->
+                <div class="col-lg-6">
+                    <div class="donate-video-wrapper">
+                        <video class="donate-hero-video" controls muted loop playsinline autoplay>
+                            <source src="img/homepg7.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1180,39 +1113,26 @@ Teach discipline, teamwork, respect, and positive masculinity.
             <div class="row">
                 <!-- Connect With Us -->
                 <div class="col-md-4">
-                    <div>
-                        <a href="index.html">
-                            <img class="footer-logo" src="img/1000475511.jpg" alt="logo">
-                        </a>
-                    </div>
                     <h4>CONNECT WITH US</h4>
                     <p><i class="fa fa-phone"></i> +256 746 701 314</p>
                     <p><i class="fa fa-envelope"></i> info@genpur.org</p>
                     <p><i class="fa fa-map-marker"></i> Amuru Town Council<br/>Gulu<br/>Uganda</p>
 
                     <div class="footer-social-icons">
-                        <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-                        <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
                     </div>
                 </div>
 
-                <!-- Our Programs -->
+                <!-- Our Programmes -->
                 <div class="col-md-4 footer-menu">
-                    <h4>OUR PROGRAMS</h4>
+                    <h4>OUR PROGRAMMES</h4>
                     <ul>
-                        <a href="education.html">
-                            <li>Child Education Support</li>
-                        </a>
-                        <a href="household.html">
-                            <li>Household Strengthening & Wellbeing</li>
-                        </a>
-                        <a href="livelihood.html">
-                            <li>Livelihood & Economic Empowerment</li>
-                        </a>
-                        <a href="sports.html">
-                            <li>Sports / Coaching Boys into Men</li>
-                        </a>
+                        <li><a href="education.html">Child Education Support</a></li>
+                        <li><a href="household.html">Household Strengthening & Wellbeing</a></li>
+                        <li><a href="livelihood.html">Livelihood & Economic Empowerment</a></li>
+                        <li><a href="sports.html">Sports / Coaching Boys into Men</a></li>
                     </ul>
                 </div>
 
@@ -1220,27 +1140,20 @@ Teach discipline, teamwork, respect, and positive masculinity.
                 <div class="col-md-4 footer-menu">
                     <h4>QUICK LINKS</h4>
                     <ul>
-                        <a href="index.html">
-                            <li>Home</li>
-                        </a>
-                        <a href="#about">
-                            <li>About Us</li>
-                        </a>
-                        <a href="get-involved.html">
-                            <li>Get Involved</li>
-                        </a>
-                        <a href="#contact">
-                            <li>Contact Us</li>
-                        </a>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Gallery</a></li>
                     </ul>
                 </div>
-
             </div>
         </div>
 
-        <!-- Copyright Section -->
         <div class="footer-copyright">
-            <p>© 2024 GenPur Community Based Organization. All rights reserved.</p>
+            <div class="container">
+                <p>&copy; 2025 GenPur Community Based Organization. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
@@ -1472,5 +1385,42 @@ $(document).ready(function() {
         //         scrollBtn.style.display = 'none';
         //     }
         // });
+
+        // Ensure donation video stays muted and auto-plays when in view
+        const donateVideo = document.querySelector('.donate-hero-video');
+        if (donateVideo) {
+            // Force video to stay muted
+            donateVideo.muted = true;
+            donateVideo.volume = 0;
+
+            // Prevent unmuting
+            donateVideo.addEventListener('volumechange', function() {
+                if (!this.muted) {
+                    this.muted = true;
+                }
+                if (this.volume > 0) {
+                    this.volume = 0;
+                }
+            });
+
+            // Auto-play when video comes into view
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Video is in view, play it
+                        donateVideo.play().catch(err => {
+                            console.log('Autoplay prevented:', err);
+                        });
+                    } else {
+                        // Video is out of view, pause it (optional)
+                        // donateVideo.pause();
+                    }
+                });
+            }, {
+                threshold: 0.5 // Play when 50% of video is visible
+            });
+
+            videoObserver.observe(donateVideo);
+        }
     </script>
 </body>

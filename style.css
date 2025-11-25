@@ -543,6 +543,14 @@ footer ul {
     padding: 0;
 }
 
+footer h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .footer-logo {
     width: 100px;
     margin-bottom: 20px;
@@ -552,7 +560,7 @@ footer ul {
 }
 
 .footer-menu h4 {
-    color: #000;
+    color: #fff;
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: 700;
@@ -573,9 +581,14 @@ footer ul {
 
 footer a:visited,
 footer a:link,
-footer a:active,
-footer a:hover {
+footer a:active {
     text-decoration: none;
+}
+
+footer a:hover {
+    color: #7bc143;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 footer .col-md-4 {
@@ -648,4 +661,300 @@ footer .col-md-4 {
     transform: translateY(-1px);
     box-shadow: 0 3px 8px rgba(123, 193, 67, 0.4);
     color: #fff !important;
+}
+
+/* Glass Background Section */
+.glass-background-section {
+    background: url('img/homepg2.jpg') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.glass-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.glass-content {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 50px;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-content h2 {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.glass-content p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .glass-background-section {
+        min-height: 400px;
+        padding: 60px 0;
+    }
+
+    .glass-content {
+        padding: 30px 20px;
+    }
+
+    .glass-content h2 {
+        font-size: 28px;
+    }
+
+    .glass-content p {
+        font-size: 16px;
+    }
+}
+
+/* Mission Text Overlay */
+.mission-text-overlay {
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.mission-text-overlay h2 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.mission-text-overlay p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .mission-text-overlay h2 {
+        font-size: 32px;
+    }
+
+    .mission-text-overlay p {
+        font-size: 16px;
+    }
+}
+
+/* Donation Section */
+.donate-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.donate-section .title-section {
+    color: #0066cc;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.donate-section .title-regular {
+    font-weight: 300;
+    color: #333;
+}
+
+.donate-section .title-underline {
+    width: 80px;
+    height: 4px;
+    background: #7bc143;
+    border: none;
+    margin: 20px 0 30px 0;
+}
+
+.donate-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.donate-section .form-group {
+    margin-bottom: 20px;
+}
+
+.donate-section .form-group label {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: block;
+    font-weight: 400;
+}
+
+.donate-section .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+
+.donate-section .form-control:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15);
+    outline: none;
+}
+
+/* Donation Amount Input with Currency */
+.donation-amount-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+}
+
+.currency-symbol {
+    padding: 15px 0 15px 15px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.donation-input {
+    border: none !important;
+    padding: 15px 10px !important;
+    flex: 1;
+    box-shadow: none !important;
+}
+
+.currency-label {
+    padding: 15px 15px 15px 0;
+    color: #666;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.currency-selector {
+    padding: 15px 15px 15px 10px;
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Donor Name Input */
+.donor-name-input {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* PayPal Button */
+.btn-paypal {
+    background: #FFC439;
+    color: #003087;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.btn-paypal:hover {
+    background: #FFB800;
+    transform: translateY(-1px);
+}
+
+.btn-paypal i {
+    margin-right: 8px;
+}
+
+/* Checkout Button */
+.btn-checkout {
+    background: #003087;
+    color: #fff;
+    width: 100%;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-checkout:hover {
+    background: #002366;
+    transform: translateY(-1px);
+}
+
+.donate-video-wrapper {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.donate-hero-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    object-fit: contain;
+    background: #000;
+}
+
+@media (max-width: 991px) {
+    .donate-section {
+        padding: 60px 0;
+    }
+
+    .donate-section .title-section {
+        font-size: 32px;
+    }
+
+    .donate-video-wrapper {
+        margin-top: 40px;
+    }
 }
