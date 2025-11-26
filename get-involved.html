@@ -1003,6 +1003,16 @@
                 }
             });
 
+            // Donation Type redirect
+            $('#donationType').on('change', function() {
+                const selectedValue = $(this).val();
+
+                // If Financial Donation is selected, redirect to home page donation section
+                if (selectedValue === 'Financial Donation') {
+                    window.location.href = 'index.html#contact';
+                }
+            });
+
             // Country code auto-population
             $('#country').on('change', function() {
                 const selectedOption = $(this).find('option:selected');
