@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Flag Icons CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <!-- Custom CSS -->
@@ -319,6 +321,7 @@
 
         .donation-form {
             padding: 40px;
+            background: white;
         }
 
         .donation-form h2 {
@@ -336,15 +339,23 @@
         }
 
         .form-control {
-            border: 2px solid #e0e0e0;
+            border: 1px solid #e5e7eb;
             border-radius: 8px;
-            padding: 12px 15px;
+            padding: 14px 16px;
             font-size: 15px;
+            background-color: #f9fafb;
+            transition: all 0.3s ease;
         }
 
         .form-control:focus {
-            border-color: #0066cc;
-            box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15);
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+            background-color: white;
+            outline: none;
+        }
+
+        .form-control::placeholder {
+            color: #9ca3af;
         }
 
         /* Style placeholder options */
@@ -388,21 +399,23 @@
         }
 
         .btn-donate {
-            background: linear-gradient(135deg, #7bc143 0%, #5fa32d 100%);
+            background: #7bc143;
             color: white;
-            padding: 15px 40px;
+            padding: 16px 40px;
             border: none;
             border-radius: 8px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             width: 100%;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(123, 193, 67, 0.3);
+            box-shadow: none;
+            margin-top: 10px;
         }
 
         .btn-donate:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(123, 193, 67, 0.4);
+            background: #6aa839;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(123, 193, 67, 0.3);
             color: white;
         }
 
@@ -792,45 +805,48 @@
 
                                 <div class="form-group">
                                     <label for="donorName">Full Name</label>
-                                    <input type="text" class="form-control" id="donorName" placeholder="Enter your name">
+                                    <input type="text" class="form-control" id="donorName" placeholder="Enter your name" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="donorEmail">Email Address</label>
-                                    <input type="email" class="form-control" id="donorEmail" placeholder="your@email.com">
+                                    <input type="email" class="form-control" id="donorEmail" placeholder="your@email.com" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="country">Country</label>
                                     <select class="form-control" id="country" required>
                                         <option value="" disabled selected>Select your country</option>
-                                        <option value="UG" data-code="+256">Uganda</option>
-                                        <option value="KE" data-code="+254">Kenya</option>
-                                        <option value="TZ" data-code="+255">Tanzania</option>
-                                        <option value="RW" data-code="+250">Rwanda</option>
-                                        <option value="SS" data-code="+211">South Sudan</option>
-                                        <option value="US" data-code="+1">United States</option>
-                                        <option value="GB" data-code="+44">United Kingdom</option>
-                                        <option value="CA" data-code="+1">Canada</option>
-                                        <option value="AU" data-code="+61">Australia</option>
-                                        <option value="ZA" data-code="+27">South Africa</option>
-                                        <option value="NG" data-code="+234">Nigeria</option>
-                                        <option value="GH" data-code="+233">Ghana</option>
-                                        <option value="ET" data-code="+251">Ethiopia</option>
-                                        <option value="IN" data-code="+91">India</option>
-                                        <option value="CN" data-code="+86">China</option>
-                                        <option value="DE" data-code="+49">Germany</option>
-                                        <option value="FR" data-code="+33">France</option>
-                                        <option value="NL" data-code="+31">Netherlands</option>
-                                        <option value="SE" data-code="+46">Sweden</option>
-                                        <option value="NO" data-code="+47">Norway</option>
+                                        <option value="UG" data-code="+256" data-flag="🇺🇬">Uganda</option>
+                                        <option value="KE" data-code="+254" data-flag="🇰🇪">Kenya</option>
+                                        <option value="TZ" data-code="+255" data-flag="🇹🇿">Tanzania</option>
+                                        <option value="RW" data-code="+250" data-flag="🇷🇼">Rwanda</option>
+                                        <option value="SS" data-code="+211" data-flag="🇸🇸">South Sudan</option>
+                                        <option value="US" data-code="+1" data-flag="🇺🇸">United States</option>
+                                        <option value="GB" data-code="+44" data-flag="🇬🇧">United Kingdom</option>
+                                        <option value="CA" data-code="+1" data-flag="🇨🇦">Canada</option>
+                                        <option value="AU" data-code="+61" data-flag="🇦🇺">Australia</option>
+                                        <option value="ZA" data-code="+27" data-flag="🇿🇦">South Africa</option>
+                                        <option value="NG" data-code="+234" data-flag="🇳🇬">Nigeria</option>
+                                        <option value="GH" data-code="+233" data-flag="🇬🇭">Ghana</option>
+                                        <option value="ET" data-code="+251" data-flag="🇪🇹">Ethiopia</option>
+                                        <option value="IN" data-code="+91" data-flag="🇮🇳">India</option>
+                                        <option value="CN" data-code="+86" data-flag="🇨🇳">China</option>
+                                        <option value="DE" data-code="+49" data-flag="🇩🇪">Germany</option>
+                                        <option value="FR" data-code="+33" data-flag="🇫🇷">France</option>
+                                        <option value="NL" data-code="+31" data-flag="🇳🇱">Netherlands</option>
+                                        <option value="SE" data-code="+46" data-flag="🇸🇪">Sweden</option>
+                                        <option value="NO" data-code="+47" data-flag="🇳🇴">Norway</option>
                                     </select>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="donorPhone">Phone Number</label>
-                                    <div class="phone-input-wrapper" style="display: flex; gap: 10px;">
-                                        <input type="text" class="form-control" id="countryCode" placeholder="+256" readonly style="width: 80px; background-color: #f0f0f0;">
+                                    <div class="phone-input-wrapper" style="display: flex; gap: 10px; align-items: center;">
+                                        <div style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; min-width: 110px;">
+                                            <span id="countryFlag" class="flag-icon flag-icon-ug" style="font-size: 24px; width: 24px; height: 18px;"></span>
+                                            <span id="countryCode" style="font-weight: 500; color: #333;">+256</span>
+                                        </div>
                                         <input type="tel" class="form-control" id="donorPhone" placeholder="7467013XX" maxlength="10" pattern="[0-9]{10}" style="flex: 1;">
                                     </div>
                                     <small class="form-text text-muted">Enter 10 digits only</small>
@@ -951,14 +967,13 @@
                 </div>
 
                 <div class="col-md-4 footer-menu">
-                    <h4>Quick Links</h4>
+                    <h4>QUICK LINKS</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="education.html">Child Education</a></li>
-                        <li><a href="household.html">Household Wellbeing</a></li>
-                        <li><a href="livelihood.html">Economic Empowerment</a></li>
-                        <li><a href="sports.html">Sports Development</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
                         <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="#">Gallery</a></li>
                     </ul>
                 </div>
 
@@ -1003,13 +1018,29 @@
                 }
             });
 
-            // Country code auto-population
+            // Donation Type redirect
+            $('#donationType').on('change', function() {
+                const selectedValue = $(this).val();
+
+                // If Financial Donation is selected, redirect to home page donation section
+                if (selectedValue === 'Financial Donation') {
+                    window.location.href = 'index.html#contact';
+                }
+            });
+
+            // Country code and flag auto-population
             $('#country').on('change', function() {
                 const selectedOption = $(this).find('option:selected');
                 const countryCode = selectedOption.data('code');
+                const countryValue = selectedOption.val().toLowerCase(); // Get country code (UG, KE, etc.)
 
                 if (countryCode) {
-                    $('#countryCode').val(countryCode);
+                    $('#countryCode').text(countryCode);
+                }
+
+                if (countryValue) {
+                    // Remove all flag classes and add the new one
+                    $('#countryFlag').attr('class', 'flag-icon flag-icon-' + countryValue);
                 }
             });
 
