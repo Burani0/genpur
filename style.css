@@ -881,8 +881,8 @@ footer .col-md-4 {
 
 /* Donor Name Input */
 .donor-name-input {
-    min-height: 150px;
-    resize: vertical;
+    min-height: 50px;
+    resize: none;
 }
 
 /* PayPal Button */
@@ -927,6 +927,36 @@ footer .col-md-4 {
 .btn-checkout:hover {
     background: #002366;
     transform: translateY(-1px);
+}
+
+/* GoFundMe Button */
+.btn-gofundme {
+    background: #02D86F;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(2, 216, 111, 0.3);
+}
+
+.btn-gofundme:hover {
+    background: #00B964;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 185, 100, 0.4);
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-gofundme i {
+    margin-right: 8px;
 }
 
 .donate-video-wrapper {

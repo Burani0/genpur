@@ -10,7 +10,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="style.css" rel="stylesheet">
 
@@ -142,10 +142,18 @@
             color: #fff !important;
         }
 
-        /* All headings use Poppins */
+        /* Global font styling */
+        body, input, button, select, textarea {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* All headings use Inter */
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-            letter-spacing: 0.5px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
+            font-weight: 700;
         }
 
         /* Page Header */
@@ -216,9 +224,11 @@
         .donation-form-title {
             font-size: 28px;
             font-weight: 700;
-            color: #333;
+            color: #1f2937;
             margin-bottom: 35px;
             text-align: center;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
         }
 
         .frequency-selector {
@@ -228,9 +238,10 @@
         .frequency-label {
             font-size: 15px;
             font-weight: 600;
-            color: #333;
+            color: #1f2937;
             margin-bottom: 12px;
             display: block;
+            font-family: 'Inter', sans-serif;
         }
 
         .frequency-buttons {
@@ -241,25 +252,35 @@
         .frequency-btn {
             flex: 1;
             padding: 14px 20px;
-            border: 1px solid #d1d5db;
+            border: 1.5px solid #d1d5db;
             background: white;
             color: #6b7280;
             font-size: 15px;
             font-weight: 500;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .frequency-btn:hover {
             border-color: #6366f1;
             background: #f9fafb;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
         }
 
         .frequency-btn.active {
             background: #6366f1;
             border-color: #6366f1;
             color: white;
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.25);
+        }
+
+        .frequency-btn.active:hover {
+            background: #5558e3;
+            border-color: #5558e3;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
         }
 
         .amount-selector {
@@ -269,9 +290,10 @@
         .amount-label {
             font-size: 15px;
             font-weight: 600;
-            color: #333;
+            color: #1f2937;
             margin-bottom: 12px;
             display: block;
+            font-family: 'Inter', sans-serif;
         }
 
         .amount-label .required {
@@ -297,43 +319,58 @@
         .amount-btn {
             width: 100%;
             padding: 16px;
-            border: 1px solid #d1d5db;
+            border: 1.5px solid #d1d5db;
             background: white;
             color: #1f2937;
             font-size: 17px;
             font-weight: 600;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: center;
         }
 
         .amount-btn:hover {
             border-color: #6366f1;
             background: #f9fafb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
         }
 
         .amount-btn.active {
             background: #6366f1;
             border-color: #6366f1;
             color: white;
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.25);
+        }
+
+        .amount-btn.active:hover {
+            background: #5558e3;
+            border-color: #5558e3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
         }
 
         .custom-amount {
             width: 100%;
             padding: 16px;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
+            border: 1.5px solid #d1d5db;
+            border-radius: 8px;
             font-size: 15px;
             color: #9ca3af;
             text-align: center;
-            transition: all 0.2s ease;
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .custom-amount:hover {
+            border-color: #9ca3af;
         }
 
         .custom-amount:focus {
             outline: none;
             border-color: #6366f1;
             color: #1f2937;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
         }
 
         .donate-btn {
@@ -344,19 +381,26 @@
             font-size: 16px;
             font-weight: 600;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
             margin-top: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
         }
 
         .donate-btn:hover {
-            background: #4f46e5;
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            background: #5558e3;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+        }
+
+        .donate-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
         }
 
         .donate-btn i {
@@ -374,6 +418,204 @@
         .secure-badge i {
             color: #10b981;
             margin-right: 6px;
+        }
+
+        /* Multi-Step Form */
+        .form-step {
+            display: none;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .back-button {
+            color: #6366f1;
+            font-size: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            display: inline-block;
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .back-button:hover {
+            color: #5558e3;
+            background: #f3f4f6;
+            transform: translateX(-2px);
+        }
+
+        .donation-summary {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .summary-amount {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 5px;
+        }
+
+        .summary-frequency {
+            font-size: 14px;
+            color: #6b7280;
+            text-transform: capitalize;
+        }
+
+        .form-group-custom {
+            margin-bottom: 20px;
+        }
+
+        .form-group-custom label {
+            font-size: 15px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+            display: block;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-group-custom label .required {
+            color: #ef4444;
+            margin-left: 3px;
+        }
+
+        .form-group-custom input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1.5px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #1f2937;
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+        }
+
+        .form-group-custom input:hover {
+            border-color: #9ca3af;
+        }
+
+        .form-group-custom input:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            background: white;
+        }
+
+        .form-group-custom input::placeholder {
+            color: #9ca3af;
+        }
+
+        /* Step 2 Smaller Font */
+        .step2-title {
+            font-size: 24px;
+            margin-bottom: 25px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+        }
+
+        .form-group-custom label {
+            font-size: 14px;
+        }
+
+        .form-group-custom input {
+            font-size: 14px;
+            padding: 12px 14px;
+        }
+
+        /* Step 3 Payment Details */
+        .payment-intro {
+            font-size: 15px;
+            color: #6b7280;
+            margin-bottom: 25px;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .payment-summary-section {
+            background: white;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .payment-summary-section:hover {
+            border-color: #d1d5db;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .summary-section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e5e7eb;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.01em;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+        }
+
+        .summary-row.total-row {
+            padding-top: 15px;
+            margin-top: 10px;
+            border-top: 2px solid #e5e7eb;
+            border-bottom: none;
+        }
+
+        .summary-label {
+            font-size: 15px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .summary-value {
+            font-size: 16px;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .total-row .summary-label {
+            font-size: 16px;
+            color: #1f2937;
+            font-weight: 700;
+        }
+
+        .total-row .summary-value {
+            font-size: 20px;
+            color: #0066cc;
+            font-weight: 700;
         }
 
         /* About Section */
@@ -596,42 +838,26 @@
 
                 <!-- Donation Form -->
                 <div class="donation-form-wrapper">
-                    <h2 class="donation-form-title">Make Your Donation</h2>
+                    <h2 class="donation-form-title">Donate to GenPur CBO</h2>
 
-                    <!-- Frequency Selector -->
-                    <div class="frequency-selector">
-                        <label class="frequency-label">Choose your donation frequency</label>
-                        <div class="frequency-buttons">
-                            <button class="frequency-btn" onclick="selectFrequency('onetime', this)">One Time</button>
-                            <button class="frequency-btn" onclick="selectFrequency('monthly', this)">Monthly</button>
-                            <button class="frequency-btn active" onclick="selectFrequency('yearly', this)">Yearly</button>
-                        </div>
+                    <p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 30px; text-align: center;">
+                        Your generous contribution helps us transform lives and empower communities in Amuru District. Every donation makes a difference.
+                    </p>
+
+                    <div class="form-group-custom">
+                        <label for="donorName">Name of Donor</label>
+                        <input type="text" class="form-control donor-name-input" id="donorName" placeholder="Enter your name" style="width: 100%; padding: 14px 16px; border: 1.5px solid #d1d5db; border-radius: 8px; font-size: 15px;">
                     </div>
 
-                    <!-- Amount Selector -->
-                    <div class="amount-selector">
-                        <label class="amount-label">
-                            Select or enter an amount <span class="required">*</span>
-                            <span class="currency-badge">USD $</span>
-                        </label>
-                        <div class="amount-buttons">
-                            <button class="amount-btn active" onclick="selectAmount(50, this)">$50.00</button>
-                            <button class="amount-btn" onclick="selectAmount(100, this)">$100.00</button>
-                            <button class="amount-btn" onclick="selectAmount(500, this)">$500.00</button>
-                            <input type="text" class="custom-amount" placeholder="Enter custom amount" id="customAmount" onfocus="clearAmounts()">
-                        </div>
-                    </div>
-
-                    <!-- Donate Button -->
-                    <button class="donate-btn" onclick="processDonation()">
-                        Donate now
-                        <i class="fa fa-arrow-right"></i>
-                    </button>
-
-                    <!-- Secure Badge -->
-                    <div class="secure-badge">
-                        <i class="fa fa-lock"></i>
-                        100% Secure Donation
+                    <!-- GoFundMe Campaign -->
+                    <div class="gofundme-section" style="margin-top: 20px;">
+                        <h4 style="color: #0066cc; font-weight: 700; margin-bottom: 20px; font-size: 20px;">Support Our GoFundMe Campaign</h4>
+                        <p style="color: #666; line-height: 1.6; margin-bottom: 20px; font-size: 15px;">
+                            We've launched a GoFundMe campaign focused on supporting education and healthcare for children in northern Uganda. Every donation, no matter the size, helps provide essential resources for these families. Your kindness can make a real difference in their lives.
+                        </p>
+                        <a href="https://www.gofundme.com/f/donate-to-empower-families-in-northern-uganda?attribution_id=sl:dcb50eb3-dfeb-4696-ba8e-1c9d41428ea5&lang=en_US&ts=1764677132&utm_campaign=fp_sharesheet&utm_medium=customer&utm_source=whatsapp" target="_blank" class="btn btn-gofundme">
+                            <i class="fa fa-heart"></i> Donate on GoFundMe
+                        </a>
                     </div>
                 </div>
             </div>
@@ -756,7 +982,7 @@
             });
         }
 
-        function processDonation() {
+        function goToStep2() {
             // Get custom amount if entered
             const customAmount = document.getElementById('customAmount').value;
             const finalAmount = customAmount || selectedAmount;
@@ -766,9 +992,62 @@
                 return;
             }
 
+            // Show step 2, hide step 1
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+            document.getElementById('step3').classList.remove('active');
+
+            // Scroll to top of form
+            document.querySelector('.donation-form-wrapper').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function goToStep3(event) {
+            event.preventDefault();
+
+            // Get custom amount if entered
+            const customAmount = document.getElementById('customAmount').value;
+            const finalAmount = customAmount || selectedAmount;
+
+            // Update payment summary
+            const frequencyText = selectedFrequency.charAt(0).toUpperCase() + selectedFrequency.slice(1);
+            document.getElementById('paymentAmount').textContent = '$' + parseFloat(finalAmount).toFixed(2);
+            document.getElementById('givingFrequency').textContent = frequencyText;
+            document.getElementById('donationTotal').textContent = '$' + parseFloat(finalAmount).toFixed(2);
+
+            // Show step 3, hide step 2
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step3').classList.add('active');
+
+            // Scroll to top of form
+            document.querySelector('.donation-form-wrapper').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            return false;
+        }
+
+        function goToStep1() {
+            // Show step 1, hide others
+            document.getElementById('step1').classList.add('active');
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step3').classList.remove('active');
+
+            // Scroll to top of form
+            document.querySelector('.donation-form-wrapper').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function submitDonation() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const customAmount = document.getElementById('customAmount').value;
+            const finalAmount = customAmount || selectedAmount;
+
             // Here you would typically integrate with a payment gateway
-            // For now, we'll show a simple alert
-            alert(`Thank you for your ${selectedFrequency} donation of $${parseFloat(finalAmount).toFixed(2)}!\n\nPlease use the bank details provided below to complete your donation.\n\nYou will receive a confirmation email with your donation receipt.`);
+            // For now, we'll show a confirmation message
+            alert(`Thank you ${firstName}!\n\nYour ${selectedFrequency} donation of $${parseFloat(finalAmount).toFixed(2)} is being processed.\n\nBank Transfer Details:\nBank: Stanbic Bank Uganda\nAccount: 9030012345678\nBranch: Gulu Branch\nSwift: SBICUGKX\n\nA confirmation email will be sent to ${email}`);
+
+            // Reset form
+            document.getElementById('donorForm').reset();
+            goToStep1();
         }
     </script>
 </body>
