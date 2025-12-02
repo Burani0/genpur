@@ -709,6 +709,30 @@ body {
 
 .navbar-nav .nav-item {
     margin: 0 2px;
+    padding: 5px 8px;
+}
+
+.navbar-link {
+    color: #7a7c82;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    margin: 2px 3px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.nav-item.active .navbar-link,
+.nav-item.active .navbar-link:hover,
+.nav-item.active .navbar-link:focus {
+    background-color: initial;
+    color: #0066cc;
 }
 
 /* Simple Fade Transition */
