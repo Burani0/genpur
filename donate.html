@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donate - GenPur CBO</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        /* Top Bar Styles */
+        .top-bar {
+            background: linear-gradient(90deg, #0066cc 0%, #0052a3 100%);
+            color: #fff;
+            padding: 8px 0;
+            font-size: 13px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1031;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-bar-item {
+            color: #fff;
+            margin-right: 20px;
+            display: inline-flex;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .top-bar-item i {
+            margin-right: 6px;
+            color: #ffd700;
+            font-size: 14px;
+        }
+
+        .top-social-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .top-social-links a {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .top-social-links a i {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .top-social-links a:first-child {
+            background-color: #1877f2;
+        }
+
+        .top-social-links a:nth-child(2) {
+            background-color: #e4405f;
+        }
+
+        .top-social-links a:last-child {
+            background-color: #1da1f2;
+        }
+
+        .top-social-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Adjust navbar position to account for top bar */
+        .navbar {
+            margin-top: 48px;
+        }
+
+        /* Navbar Links Styling */
+        .navbar-nav {
+            margin-top: 0;
+            align-items: center;
+        }
+
+        .navbar-nav .nav-item {
+            margin: 0 2px;
+            padding: 5px 8px;
+        }
+
+        .navbar-link {
+            color: #7a7c82;
+            font-size: 15px;
+            font-weight: 700;
+            font-family: 'Open Sans', 'Roboto', sans-serif;
+            margin: 2px 3px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-link:hover,
+        .navbar-link:focus {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .nav-item.active .navbar-link,
+        .nav-item.active .navbar-link:hover,
+        .nav-item.active .navbar-link:focus {
+            background-color: initial;
+            color: #0066cc;
+        }
+
+        /* Get Involved Button */
+        .btn-get-involved {
+            background: #7bc143;
+            color: #fff !important;
+            padding: 6px 18px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 13px;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(123, 193, 67, 0.3);
+        }
+
+        .btn-get-involved:hover {
+            background: #5fa32d;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(123, 193, 67, 0.4);
+            color: #fff !important;
+        }
+
+        /* All headings use Poppins */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            padding: 60px 0 50px;
+            margin-top: 48px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: white;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .page-header p {
+            color: white;
+            font-size: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Donation Section */
+        .donation-section {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .donation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .donation-content {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .donation-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .donation-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+        }
+
+        .donation-form-wrapper {
+            flex: 1;
+            background: white;
+            padding: 50px 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .donation-form-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .frequency-selector {
+            margin-bottom: 30px;
+        }
+
+        .frequency-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .frequency-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .frequency-btn {
+            flex: 1;
+            padding: 14px 20px;
+            border: 1px solid #d1d5db;
+            background: white;
+            color: #6b7280;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .frequency-btn:hover {
+            border-color: #6366f1;
+            background: #f9fafb;
+        }
+
+        .frequency-btn.active {
+            background: #6366f1;
+            border-color: #6366f1;
+            color: white;
+        }
+
+        .amount-selector {
+            margin-bottom: 30px;
+        }
+
+        .amount-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .amount-label .required {
+            color: #ef4444;
+        }
+
+        .currency-badge {
+            float: right;
+            background: #f3f4f6;
+            padding: 5px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .amount-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .amount-btn {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #d1d5db;
+            background: white;
+            color: #1f2937;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .amount-btn:hover {
+            border-color: #6366f1;
+            background: #f9fafb;
+        }
+
+        .amount-btn.active {
+            background: #6366f1;
+            border-color: #6366f1;
+            color: white;
+        }
+
+        .custom-amount {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 15px;
+            color: #9ca3af;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .custom-amount:focus {
+            outline: none;
+            border-color: #6366f1;
+            color: #1f2937;
+        }
+
+        .donate-btn {
+            width: 100%;
+            padding: 16px;
+            background: #6366f1;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .donate-btn:hover {
+            background: #4f46e5;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .donate-btn i {
+            font-size: 16px;
+        }
+
+        .secure-badge {
+            text-align: center;
+            margin-top: 16px;
+            color: #6b7280;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .secure-badge i {
+            color: #10b981;
+            margin-right: 6px;
+        }
+
+        /* About Section */
+        .about-donation {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .about-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 20px;
+        }
+
+        .about-subtitle {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .impact-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .impact-card i {
+            font-size: 48px;
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        .impact-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .impact-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Bank Details Section */
+        .bank-details {
+            background: white;
+            padding: 60px 0;
+            color: #333;
+        }
+
+        .bank-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #0066cc;
+        }
+
+        .bank-info {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .bank-detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .bank-detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .bank-label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        .bank-value {
+            font-weight: 700;
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .donation-content {
+                flex-direction: column;
+            }
+
+            .donation-image img {
+                height: 400px;
+            }
+
+            .donate-hero h1 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .top-bar {
+                position: relative;
+                padding: 10px 0;
+            }
+
+            .navbar {
+                margin-top: 0;
+            }
+
+            .donate-hero {
+                padding: 100px 0 60px;
+            }
+
+            .donate-hero h1 {
+                font-size: 28px;
+            }
+
+            .frequency-buttons {
+                flex-direction: column;
+            }
+
+            .donation-section {
+                padding: 40px 0;
+            }
+
+            .donation-form-wrapper {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <span class="top-bar-item"><i class="fa fa-envelope"></i> info@genpur.org</span>
+                    <span class="top-bar-item"><i class="fa fa-phone"></i> +256 746 701 314</span>
+                    <span class="top-bar-item"><i class="fa fa-map-marker"></i> Amuru Town Council, Gulu</span>
+                </div>
+                <div class="col-md-3 text-right">
+                    <div class="top-social-links" style="justify-content: flex-end;">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md bg-light fixed-top">
+        <div class="container">
+            <a href="index.html"><img class="logo navbar-brand" src="img/1000475511.jpg" alt="Logo" style="border-radius: 90px; height: 60px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"><i class="fa fa-navicon"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="navbar-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="navbar-link" href="education.html">Child Education</a></li>
+                    <li class="nav-item"><a class="navbar-link" href="household.html">Household Strengthening</a></li>
+                    <li class="nav-item"><a class="navbar-link" href="livelihood.html">Livelihood</a></li>
+                    <li class="nav-item"><a class="navbar-link" href="sports.html">Coaching Boys to Men</a></li>
+                    <li class="nav-item"><a href="get-involved.html" class="btn btn-get-involved">Get Involved</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>SUPPORT OUR MISSION</h1>
+            <p>Your generous donation helps us transform lives in Amuru District. Every contribution makes a real difference in providing education, strengthening families, improving livelihoods, and empowering young people to build a brighter future.</p>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation-section">
+        <div class="container donation-container">
+            <div class="donation-content">
+                <!-- Donation Image -->
+                <div class="donation-image">
+                    <img src="img/getinvolved1.jpg" alt="GenPur Impact">
+                </div>
+
+                <!-- Donation Form -->
+                <div class="donation-form-wrapper">
+                    <h2 class="donation-form-title">Make Your Donation</h2>
+
+                    <!-- Frequency Selector -->
+                    <div class="frequency-selector">
+                        <label class="frequency-label">Choose your donation frequency</label>
+                        <div class="frequency-buttons">
+                            <button class="frequency-btn" onclick="selectFrequency('onetime', this)">One Time</button>
+                            <button class="frequency-btn" onclick="selectFrequency('monthly', this)">Monthly</button>
+                            <button class="frequency-btn active" onclick="selectFrequency('yearly', this)">Yearly</button>
+                        </div>
+                    </div>
+
+                    <!-- Amount Selector -->
+                    <div class="amount-selector">
+                        <label class="amount-label">
+                            Select or enter an amount <span class="required">*</span>
+                            <span class="currency-badge">USD $</span>
+                        </label>
+                        <div class="amount-buttons">
+                            <button class="amount-btn active" onclick="selectAmount(50, this)">$50.00</button>
+                            <button class="amount-btn" onclick="selectAmount(100, this)">$100.00</button>
+                            <button class="amount-btn" onclick="selectAmount(500, this)">$500.00</button>
+                            <input type="text" class="custom-amount" placeholder="Enter custom amount" id="customAmount" onfocus="clearAmounts()">
+                        </div>
+                    </div>
+
+                    <!-- Donate Button -->
+                    <button class="donate-btn" onclick="processDonation()">
+                        Donate now
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
+
+                    <!-- Secure Badge -->
+                    <div class="secure-badge">
+                        <i class="fa fa-lock"></i>
+                        100% Secure Donation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-donation">
+        <div class="container">
+            <h2 class="about-title">About GenPur Community Based Organization</h2>
+
+            <div class="about-subtitle">
+                One Donation. A Lifetime of Impact.
+            </div>
+
+            <p class="about-text">
+                Opportunity is not equal until now. GenPur CBO is dedicated to breaking the cycle of poverty in Amuru District, Northern Uganda, through comprehensive community development programs that transform lives.
+            </p>
+
+            <p class="about-text">
+                Your donation supports our four core programs: Child Education Support, Household Strengthening and Wellbeing, Livelihood and Economic Empowerment, and Sports/Coaching Boys into Men. Together, these programs address the root causes of poverty and create sustainable pathways to prosperity.
+            </p>
+
+            <p class="about-text">
+                Your contribution does more than provide immediate assistance. It breaks cycles of poverty, builds economic agency, and uplifts entire families for generations to come.
+            </p>
+
+            <h3 class="about-subtitle" style="margin-top: 50px;">
+                Join our mission and donate today.
+            </h3>
+
+            <p class="about-text" style="font-style: italic;">
+                Right after donating you'll receive your receipt by email. Your personalized donation certificate will arrive within 48 hours.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Connect With Us -->
+                <div class="col-md-4" id="contact">
+                    <img src="img/1000475511.jpg" alt="Logo" class="footer-logo" style="margin-bottom: 15px; width: 80px; height: auto;">
+                    <h4>CONNECT WITH US</h4>
+                    <p><i class="fa fa-phone"></i> +256 746 701 314</p>
+                    <p><i class="fa fa-envelope"></i> info@genpur.org</p>
+                    <p><i class="fa fa-map-marker"></i> Amuru Town Council<br/>Gulu<br/>Uganda</p>
+
+                    <div class="footer-social-icons">
+                        <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Our Programmes -->
+                <div class="col-md-4 footer-menu">
+                    <h4>OUR PROGRAMMES</h4>
+                    <ul>
+                        <li><a href="education.html">Child Education</a></li>
+                        <li><a href="household.html">Household Strengthening</a></li>
+                        <li><a href="livelihood.html">Livelihood</a></li>
+                        <li><a href="sports.html">Coaching Boys to Men</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4 footer-menu">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <p>&copy; 2025 GenPur Community Based Organization. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        let selectedFrequency = 'yearly';
+        let selectedAmount = 50;
+
+        function selectFrequency(frequency, button) {
+            // Remove active class from all frequency buttons
+            document.querySelectorAll('.frequency-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            // Add active class to clicked button
+            button.classList.add('active');
+            selectedFrequency = frequency;
+        }
+
+        function selectAmount(amount, button) {
+            // Remove active class from all amount buttons
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            // Add active class to clicked button
+            button.classList.add('active');
+            selectedAmount = amount;
+            // Clear custom amount
+            document.getElementById('customAmount').value = '';
+        }
+
+        function clearAmounts() {
+            // Remove active class from all amount buttons when custom amount is focused
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+        }
+
+        function processDonation() {
+            // Get custom amount if entered
+            const customAmount = document.getElementById('customAmount').value;
+            const finalAmount = customAmount || selectedAmount;
+
+            if (!finalAmount) {
+                alert('Please select or enter a donation amount');
+                return;
+            }
+
+            // Here you would typically integrate with a payment gateway
+            // For now, we'll show a simple alert
+            alert(`Thank you for your ${selectedFrequency} donation of $${parseFloat(finalAmount).toFixed(2)}!\n\nPlease use the bank details provided below to complete your donation.\n\nYou will receive a confirmation email with your donation receipt.`);
+        }
+    </script>
+</body>
+</html>
