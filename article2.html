@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Every Contribution Counts: Make a Difference - GenPur CBO</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Source+Sans+Pro:400,700|Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        /* Article Styles */
+        .article-header {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            padding: 80px 0 60px;
+            margin-top: 65px;
+        }
+
+        .article-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 30px;
+            font-size: 16px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .article-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .article-meta-item i {
+            font-size: 18px;
+        }
+
+        .article-content {
+            padding: 60px 0;
+        }
+
+        .article-featured-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .article-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .article-text h2 {
+            color: #0066cc;
+            font-size: 32px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .article-text h3 {
+            color: #0066cc;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .article-text ul, .article-text ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .article-text li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .article-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #0066cc;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: color 0.3s;
+        }
+
+        .article-back-link:hover {
+            color: #7bc143;
+            text-decoration: none;
+        }
+
+        .article-share {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .article-share h4 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .share-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+            color: white;
+        }
+
+        .share-btn.facebook {
+            background: #3b5998;
+        }
+
+        .share-btn.twitter {
+            background: #1da1f2;
+        }
+
+        .share-btn.whatsapp {
+            background: #25d366;
+        }
+
+        .highlight-box {
+            background: #f0f8ff;
+            border-left: 4px solid #0066cc;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 28px;
+            }
+
+            .article-featured-image {
+                height: 300px;
+            }
+
+            .article-text {
+                font-size: 16px;
+            }
+
+            .article-text h2 {
+                font-size: 24px;
+            }
+
+            .article-text h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="top-bar-left">
+                        <span class="top-bar-item">
+                            <i class="fa fa-envelope"></i> info@genpur.org
+                        </span>
+                        <span class="top-bar-item">
+                            <i class="fa fa-phone"></i> +256 746 701 314
+                        </span>
+                        <span class="top-bar-item">
+                            <i class="fa fa-map-marker"></i> Amuru Town Council, Gulu
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-bar-right">
+                        <a href="https://facebook.com/genpur" target="_blank" class="social-icon">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/genpur" target="_blank" class="social-icon">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/genpur" target="_blank" class="social-icon">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="top: 33px;">
+        <div class="container">
+            <a href="index.html"><img class="logo navbar-brand image-responsive" src="img/1000475511.jpg" alt="Logo" style="border-radius: 90px;"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="navbar-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="education.html">Child Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="household.html">Household Strengthening</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="livelihood.html">Livelihood</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="sports.html">Coaching Boys into Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="get-involved.html" class="btn btn-get-involved">Get Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="donate.html" class="btn btn-get-involved" style="background: #ffa500;">Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <h1 class="article-title">Every Contribution Counts: Make a Difference</h1>
+            <div class="article-meta">
+                <span class="article-meta-item">
+                    <i class="fa fa-calendar"></i>
+                    March 24, 2024
+                </span>
+                <span class="article-meta-item">
+                    <i class="fa fa-tag"></i>
+                    Education
+                </span>
+                <span class="article-meta-item">
+                    <i class="fa fa-user"></i>
+                    GenPur CBO Team
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="article-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <a href="get-involved.html" class="article-back-link">
+                        <i class="fa fa-arrow-left"></i> Back to Articles
+                    </a>
+
+                    <img src="img/news2.jpg" alt="Every Contribution Counts" class="article-featured-image">
+
+                    <div class="article-text">
+                        <p>
+                            In the heart of Northern Uganda, in the communities we serve through GenPur CBO, small acts of generosity create ripples of change that transform entire lives. You don't need to be wealthy to make a meaningful difference. Every contribution, no matter the size, has the power to change a child's future, strengthen a family, or empower a community.
+                        </p>
+
+                        <h2>The Power of Small Donations</h2>
+                        <p>
+                            When people think about charitable giving, they often believe they need to donate large amounts to make an impact. But the reality is quite different. At GenPur CBO, we've seen firsthand how contributions of all sizes come together to create transformative change.
+                        </p>
+
+                        <div class="highlight-box">
+                            <strong>Did you know?</strong> A donation of just $10 can provide school supplies for a child for an entire term. $25 can feed a family for a week. $50 sponsors a child's education for a full term.
+                        </div>
+
+                        <h3>Real Impact, Real Numbers</h3>
+                        <p>
+                            Here's what your contribution can accomplish:
+                        </p>
+                        <ul>
+                            <li><strong>$10:</strong> School supplies (notebooks, pens, pencils) for one child</li>
+                            <li><strong>$25:</strong> Food support for a vulnerable family for one week</li>
+                            <li><strong>$50:</strong> Full term school fees for one child</li>
+                            <li><strong>$75:</strong> Positive parenting training for three caregivers</li>
+                            <li><strong>$100:</strong> Modern agricultural training for five farmers</li>
+                            <li><strong>$200:</strong> Complete sports equipment and coaching for a Coaching Boys into Men program</li>
+                        </ul>
+
+                        <h2>Meet Sarah: A Story of Small Contributions</h2>
+                        <p>
+                            Sarah is a 12-year-old girl from Amuru District who dreams of becoming a teacher. Her parents, struggling farmers affected by years of conflict, couldn't afford her school fees. Through the collective contributions of donors - some giving $10, others $20, and a few giving $50 - we were able to sponsor Sarah's education for an entire year.
+                        </p>
+                        <p>
+                            Today, Sarah is thriving in school, consistently ranking among the top students in her class. She's not just receiving an education; she's receiving hope, opportunity, and the chance to break the cycle of poverty that has affected her family for generations.
+                        </p>
+
+                        <h3>The Multiplier Effect</h3>
+                        <p>
+                            When you donate to GenPur CBO, your contribution doesn't just help one person - it creates a multiplier effect:
+                        </p>
+                        <ol>
+                            <li><strong>Immediate Impact:</strong> Your donation provides immediate relief or support to a beneficiary</li>
+                            <li><strong>Family Benefit:</strong> When one person is helped, their entire family benefits</li>
+                            <li><strong>Community Growth:</strong> Educated children become community leaders; trained farmers share knowledge; empowered families lift others</li>
+                            <li><strong>Generational Change:</strong> Today's beneficiaries become tomorrow's change-makers</li>
+                        </ol>
+
+                        <h2>Every Contribution Tells a Story</h2>
+                        <p>
+                            We celebrate donors of all capacities because we understand that behind every contribution is a person who cares, who believes in our mission, and who wants to make a difference. Whether you can give $5 or $500, your donation is valued, appreciated, and put to immediate use.
+                        </p>
+
+                        <div class="highlight-box">
+                            <p><strong>Monthly Giving:</strong> Consider becoming a monthly donor! A recurring donation of just $20/month ($240/year) can sponsor a child's complete education, including fees, supplies, and support services.</p>
+                        </div>
+
+                        <h3>Join Our Community of Change-Makers</h3>
+                        <p>
+                            GenPur CBO is built on the foundation of community - both the communities we serve and the community of donors who make our work possible. When you contribute, you become part of a global family committed to transforming lives in Northern Uganda.
+                        </p>
+                        <p>
+                            Your contribution, combined with others, creates:
+                        </p>
+                        <ul>
+                            <li>Educational opportunities for vulnerable children</li>
+                            <li>Economic empowerment for struggling families</li>
+                            <li>Skills training and livelihood support</li>
+                            <li>Mentorship and sports programs for young boys</li>
+                            <li>Positive parenting and household strengthening initiatives</li>
+                        </ul>
+
+                        <h2>Start Making a Difference Today</h2>
+                        <p>
+                            Don't let the size of your contribution stop you from taking action. Every dollar counts. Every contribution matters. Together, we're building a brighter future for the children and families of Northern Uganda.
+                        </p>
+                        <p>
+                            Ready to make your contribution count? <a href="donate.html">Visit our donation page</a> and be part of something bigger than yourself. Be part of hope. Be part of change. Be part of GenPur CBO.
+                        </p>
+
+                        <!-- Share Section -->
+                        <div class="article-share">
+                            <h4>Share This Article</h4>
+                            <div class="share-buttons">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/article2.html" target="_blank" class="share-btn facebook">
+                                    <i class="fa fa-facebook"></i> Facebook
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com/article2.html&text=Every Contribution Counts: Make a Difference" target="_blank" class="share-btn twitter">
+                                    <i class="fa fa-twitter"></i> Twitter
+                                </a>
+                                <a href="https://wa.me/?text=Every Contribution Counts: Make a Difference https://yourwebsite.com/article2.html" target="_blank" class="share-btn whatsapp">
+                                    <i class="fa fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/1000475511.jpg" alt="GenPur Logo" class="footer-logo">
+                    <p>GenPur CBO is dedicated to improving lives through education, health, economic empowerment, and sports development in Amuru District.</p>
+                </div>
+
+                <div class="col-md-4 footer-menu">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="education.html">Child Education</a></li>
+                        <li><a href="household.html">Household Strengthening</a></li>
+                        <li><a href="livelihood.html">Livelihood</a></li>
+                        <li><a href="sports.html">Coaching Boys into Men</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-contact">
+                    <h4>CONTACT US</h4>
+                    <p><i class="fa fa-map-marker"></i> Amuru Town Council, Gulu, Uganda</p>
+                    <p><i class="fa fa-phone"></i> +256 746 701 314</p>
+                    <p><i class="fa fa-envelope"></i> info@genpur.org</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/genpur" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/genpur" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://instagram.com/genpur" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 GenPur CBO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
