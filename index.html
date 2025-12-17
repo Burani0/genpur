@@ -598,7 +598,15 @@
 }
 
 .top-social-links a:last-child {
-    background-color: #1da1f2; /* Twitter blue */
+    background-color: #000000; /* Black for X */
+}
+
+/* Override Twitter icon to display X in top bar */
+.top-social-links .fa-twitter::before {
+    content: "𝕏" !important;
+    font-family: inherit !important;
+    font-weight: normal !important;
+    font-style: normal !important;
 }
 
 .top-social-links a:hover {
@@ -932,6 +940,34 @@ body {
         font-size: 16px;
     }
 }
+
+/* Override Twitter icon to display X */
+.fa-twitter::before {
+    content: "𝕏" !important;
+    font-family: inherit !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+.footer-social-icons .fa-twitter::before {
+    content: "𝕏" !important;
+    font-family: inherit !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+/* Footer social icons styling */
+.footer-social-icons a[title="Facebook"] {
+    background-color: #1877f2 !important;
+}
+
+.footer-social-icons a[title="Instagram"] {
+    background-color: #e4405f !important;
+}
+
+.footer-social-icons a[title="X"] {
+    background-color: #000000 !important;
+}
     </style>
 </head>
 
@@ -1190,15 +1226,6 @@ Use sports as a tool for mentorship, character building, and positive masculinit
                     </div>
                 </div>
 
-                <!-- Livelihood & Economic Empowerment - Second Metric -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="impact-card">
-                        <div class="impact-number">200</div>
-                        <p class="impact-description">
-                            Farmers trained on VSLA model and financial literacy
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1277,7 +1304,7 @@ Use sports as a tool for mentorship, character building, and positive masculinit
                     <div class="footer-social-icons">
                         <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
                         <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
-                        <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" title="X"><i class="fa fa-twitter"></i></a>
                     </div>
                 </div>
 

@@ -615,19 +615,31 @@ footer .col-md-4 {
 
 /* Individual brand colors for footer social icons */
 .footer-social-icons a[title="Facebook"] {
-    background-color: #1877f2;
+    background-color: #1877f2 !important;
 }
 
 .footer-social-icons a[title="Instagram"] {
-    background-color: #e4405f;
+    background-color: #e4405f !important;
+}
+
+.footer-social-icons a[title="X"] {
+    background-color: #000000 !important;
 }
 
 .footer-social-icons a[title="Twitter"] {
-    background-color: #1da1f2;
+    background-color: #000000 !important;
 }
 
 .footer-social-icons a[title="LinkedIn"] {
-    background-color: #0077b5;
+    background-color: #0077b5 !important;
+}
+
+/* Override Twitter icon to display X */
+.footer-social-icons .fa-twitter::before {
+    content: "𝕏" !important;
+    font-family: inherit !important;
+    font-weight: normal !important;
+    font-style: normal !important;
 }
 
 .footer-social-icons a:hover {

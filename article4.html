@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Overcoming Obstacles: Thomas's Bright Future - GenPur CBO</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Source+Sans+Pro:400,700|Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        /* Article Styles */
+        .article-header {
+            background: white;
+            color: #333;
+            padding: 80px 0 60px;
+            margin-top: 65px;
+        }
+
+        .article-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #1a1a1a;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 30px;
+            font-size: 16px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .article-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+        }
+
+        .article-meta-item i {
+            font-size: 18px;
+            color: #0066cc;
+        }
+
+        .article-content {
+            padding: 60px 0;
+        }
+
+        .article-featured-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .article-text {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 25px;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+        }
+
+        .article-text h2 {
+            color: #1a1a1a;
+            font-size: 36px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            font-weight: 700;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+        }
+
+        .article-text h3 {
+            color: #1a1a1a;
+            font-size: 28px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+        }
+
+        .article-text p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .article-text .lead {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #444;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .article-text ul, .article-text ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .article-text li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .article-text .quote {
+            background: #f8f9fa;
+            border-left: 4px solid #7bc143;
+            padding: 20px 30px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .article-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #0066cc;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: color 0.3s;
+        }
+
+        .article-back-link:hover {
+            color: #7bc143;
+            text-decoration: none;
+        }
+
+        .article-share {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .article-share h4 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .share-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+            color: white;
+        }
+
+        .share-btn.facebook {
+            background: #3b5998;
+        }
+
+        .share-btn.twitter {
+            background: #1da1f2;
+        }
+
+        .share-btn.whatsapp {
+            background: #25d366;
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            color: #1a1a1a !important;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .cta-box a {
+            background: linear-gradient(135deg, #7bc143 0%, #5fa32d 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .cta-box a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(123, 193, 67, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 28px;
+            }
+
+            .article-featured-image {
+                max-height: 300px;
+            }
+
+            .article-text {
+                font-size: 16px;
+            }
+
+            .article-text h2 {
+                font-size: 24px;
+            }
+
+            .article-text h3 {
+                font-size: 20px;
+            }
+        }
+
+        /* Override Twitter icon to display X */
+        .fa-twitter::before {
+            content: "𝕏" !important;
+            font-family: inherit !important;
+            font-weight: normal !important;
+            font-style: normal !important;
+        }
+
+        .footer-social-icons .fa-twitter::before {
+            content: "𝕏" !important;
+            font-family: inherit !important;
+            font-weight: normal !important;
+            font-style: normal !important;
+        }
+/* Override Twitter icon to display X */        .fa-twitter::before {            content: "𝕏" !important;            font-family: inherit !important;            font-weight: normal !important;            font-style: normal !important;        }        .footer-social-icons .fa-twitter::before {            content: "𝕏" !important;            font-family: inherit !important;            font-weight: normal !important;            font-style: normal !important;        }        /* Footer social icons styling */        .footer-social-icons a[title="Facebook"] {            background-color: #1877f2 !important;        }        .footer-social-icons a[title="Instagram"] {            background-color: #e4405f !important;        }        .footer-social-icons a[title="X"] {            background-color: #000000 !important;        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="top-bar-left">
+                        <span class="top-bar-item">
+                            <i class="fa fa-envelope"></i> info@genpur.org
+                        </span>
+                        <span class="top-bar-item">
+                            <i class="fa fa-phone"></i> +256 746 701 314
+                        </span>
+                        <span class="top-bar-item">
+                            <i class="fa fa-map-marker"></i> Amuru Town Council, Gulu
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-bar-right">
+                        <a href="https://facebook.com/genpur" target="_blank" class="social-icon">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/genpur" target="_blank" class="social-icon">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/genpur" target="_blank" class="social-icon">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="top: 33px;">
+        <div class="container">
+            <a href="index.html"><img class="logo navbar-brand image-responsive" src="img/1000475511.jpg" alt="Logo" style="border-radius: 90px;"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="navbar-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="education.html">Child Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="household.html">Household Strengthening</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="livelihood.html">Livelihood</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="sports.html">Coaching Boys into Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="get-involved.html" class="btn btn-get-involved">Get Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="donate.html" class="btn btn-get-involved" style="background: #ffa500;">Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <h1 class="article-title">Overcoming Obstacles: Thomas's Bright Future in the Classroom and Beyond</h1>
+            <div class="article-meta">
+                <span class="article-meta-item">
+                    <i class="fa fa-calendar"></i>
+                    December 4, 2025
+                </span>
+                <span class="article-meta-item">
+                    <i class="fa fa-tag"></i>
+                    Success Stories
+                </span>
+                <span class="article-meta-item">
+                    <i class="fa fa-user"></i>
+                    GenPur CBO Team
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="article-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <a href="get-involved.html" class="article-back-link">
+                        <i class="fa fa-arrow-left"></i> Back to Articles
+                    </a>
+
+                    <img src="img/thomas4.jpg" alt="Thomas's Success Story" class="article-featured-image">
+
+                    <div class="article-text">
+                        <p class="lead" style="font-size: 20px; color: #555;">
+                            Meet Thomas, a remarkable 17-year-old who is redefining what's possible, proving that every child deserves the chance to shine.
+                        </p>
+
+                        <h2>Background and Initial Challenges</h2>
+                        <p>
+                            Thomas, who is in the sixth grade, was diagnosed with physical challenges at the age of 14 leading to amputation of his limbs. He lives with his parents and 7 other siblings - 4 sisters and 3 brothers. From the beginning, Thomas approached the world with curiosity, but the educational system wasn't always equipped to support his unique needs.
+                        </p>
+                        <p>
+                            His primary challenges were not just physical, but also social and systemic. He struggled with mobility within a standard school environment, and the lack of accessible learning materials made classroom participation difficult. Furthermore, he often faced social isolation, finding it difficult to join in physical activities during break time or games time, which affected his confidence and engagement in school.
+                        </p>
+                        <p>
+                            The core challenge was ensuring Thomas could access the same quality of education and social experiences as his peers without feeling limited by his condition. Due to lack of wheelchair to support him with mobility to school, Thomas missed school for two terms. His mum who is old and ailing was unable to escort him to school on a daily basis.
+                        </p>
+
+                        <h2>Support Provided</h2>
+                        <p>
+                            Through referral from ADRA organization where he is a beneficiary, GenPur partnered with Thomas's family and school to implement a comprehensive support system designed around his specific needs and strengths:
+                        </p>
+
+                        <h3>Mobility Assistance</h3>
+                        <p>
+                            We helped secure necessary mobility aid - a wheelchair for Thomas, enabling him to navigate his school environment independently and participate fully in classroom activities.
+                        </p>
+
+                        <h3>Mindset Change</h3>
+                        <p>
+                            Through ADRA, Thomas was taken through mindset change training and supported with a small grant to support him with his education. The grant included goat, fruit and tree seedlings whose aim is to serve as Income Generating Activities (IGAs) for him.
+                        </p>
+
+                        <h2>Outcomes and Future Outlook</h2>
+                        <p>
+                            The impact has been profound. Thomas is now back to school and thriving academically and socially. He is an enthusiastic member of the school Permaculture club where they are taught on entrepreneurship, social responsibility, and academic development and saving and spending.
+                        </p>
+                        <p>
+                            Thomas has also started his own garden and currently farming jute leaves commonly known in the local language as "boo". Through this, he will sell the vegetables and save towards his school fees.
+                        </p>
+
+                        <div class="quote">
+                            "Seeing Thomas come home excited about school every day is the greatest gift. The support didn't just change his school life; it changed our family's outlook on his future."
+                            <br><strong>- Thomas's Mother</strong>
+                        </div>
+
+                        <p>
+                            Thomas is now focused on his goal of becoming a doctor. His success story is a powerful reminder that with the right support, every child can achieve remarkable things.
+                        </p>
+
+                        <!-- Call to Action Box -->
+                        <div class="cta-box">
+                            <h3>Help Us Create More Success Stories Like Thomas</h3>
+                            <p>Your contribution makes inclusive education possible for children with disabilities in our community.</p>
+                            <a href="donate.html">Donate Now</a>
+                        </div>
+
+                        <!-- Share Section -->
+                        <div class="article-share">
+                            <h4>Share This Story</h4>
+                            <div class="share-buttons">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/article4.html" target="_blank" class="share-btn facebook">
+                                    <i class="fa fa-facebook"></i> Facebook
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com/article4.html&text=Thomas's Inspiring Story" target="_blank" class="share-btn twitter">
+                                    <i class="fa fa-twitter"></i> Twitter
+                                </a>
+                                <a href="https://wa.me/?text=Read Thomas's inspiring story https://yourwebsite.com/article4.html" target="_blank" class="share-btn whatsapp">
+                                    <i class="fa fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Connect With Us -->
+                <div class="col-md-4">
+                    <img src="img/1000475511.jpg" alt="Logo" class="footer-logo" style="margin-bottom: 15px; width: 80px; height: auto;">
+                    <h4>CONNECT WITH US</h4>
+                    <p><i class="fa fa-phone"></i> +256 746 701 314</p>
+                    <p><i class="fa fa-envelope"></i> info@genpur.org</p>
+                    <p><i class="fa fa-map-marker"></i> Amuru Town Council<br/>Gulu<br/>Uganda</p>
+
+                    <div class="footer-social-icons">
+                        <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="#" title="X"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Our Programmes -->
+                <div class="col-md-4 footer-menu">
+                    <h4>OUR PROGRAMMES</h4>
+                    <ul>
+                        <li><a href="education.html">Child Education</a></li>
+                        <li><a href="household.html">Household Strengthening</a></li>
+                        <li><a href="livelihood.html">Livelihood</a></li>
+                        <li><a href="sports.html">Coaching Boys into Men</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4 footer-menu">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <p>&copy; 2025 GenPur Community Based Organization. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

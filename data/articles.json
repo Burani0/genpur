@@ -1,0 +1,125 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "slug": "overcoming-obstacles-thomas-bright-future",
+      "title": "Overcoming Obstacles: Thomas's Bright Future in the Classroom and Beyond",
+      "excerpt": "Meet Thomas, a remarkable 17-year-old who has transformed his life through education and agriculture. His journey from uncertainty to success showcases the power of support and determination.",
+      "category": "Success Stories",
+      "categoryColor": "#7bc143",
+      "author": "GenPur CBO Team",
+      "publishedDate": "2025-12-04",
+      "featuredImage": "img/thomas5.jpg",
+      "content": {
+        "sections": [
+          {
+            "heading": "Background and Challenge",
+            "text": "Thomas is a 17-year-old boy whose life took a difficult turn when his father passed away. As the eldest child in his family, Thomas faced the harsh reality of his family's financial situation. With limited resources, continuing his education seemed like an impossible dream.",
+            "image": "img/siblings.jpg"
+          },
+          {
+            "heading": "Intervention and Support",
+            "text": "That's when GenPur CBO stepped in to offer Thomas a lifeline. Understanding the critical importance of education, the organization enrolled Thomas in their comprehensive support program. This wasn't just about paying school fees—it was about investing in Thomas's entire future."
+          },
+          {
+            "heading": "Educational Progress",
+            "text": "With GenPur's support, Thomas was able to continue his secondary education without the constant worry of being sent home for unpaid fees. The organization provided not just tuition support, but also essential learning materials, uniforms, and mentorship to ensure Thomas could focus on his studies."
+          },
+          {
+            "heading": "Skills Development",
+            "text": "Recognizing that education extends beyond the classroom, GenPur also introduced Thomas to practical skills that would serve him throughout his life. He received training in sustainable agriculture and small business management, giving him tools to support himself and his family.",
+            "video": "development.jpg.mp4"
+          },
+          {
+            "heading": "Mindset Change",
+            "text": "Through ADRA, Thomas was taken through mindset change training and supported with a small grant to support him with his education. The grant included goat, fruit and tree seedlings whose aim is to serve as Income Generating Activities (IGAs) for him."
+          },
+          {
+            "heading": "Outcomes and Future Outlook",
+            "text": "The impact has been profound. Thomas is now back in school and thriving academically and socially. He is an enthusiastic member of the school Permaculture club where they are taught on entrepreneurship, social responsibility, and academic development and saving and spending.\n\nThomas has also started his own garden and currently farming jute leaves commonly known in the local language as 'boo'. Through this, he will sell the vegetables and save towards his school fees.\n\n\"Seeing Thomas come home excited about school every day is the greatest gift. The support didn't just change his school life; it changed our family's outlook on his future.\" - Thomas's Mother"
+          }
+        ]
+      },
+      "ctaText": "Help Us Create More Success Stories Like Thomas",
+      "ctaLink": "donate.html"
+    },
+    {
+      "id": 2,
+      "slug": "health-awareness-2025-aids-gbv",
+      "title": "Health & Awareness 2025: GenPur CBO Stands Against AIDS and Gender-Based Violence",
+      "excerpt": "GenPur CBO joins global movements to raise awareness on two important campaigns: World AIDS Day (December 1st) commemorating the fight against HIV/AIDS, and the 16 Days of Activism against Gender-Based Violence (November 25 - December 10).",
+      "category": "Health & Awareness",
+      "categoryColor": "#dc3545",
+      "author": "GenPur CBO Community Team",
+      "publishedDate": "2025-12-01",
+      "featuredImage": "img/pics.jpg",
+      "featuredImages": ["img/pics.jpg", "img/digital.jpg"],
+      "content": {
+        "sections": [
+          {
+            "heading": "WORLD AIDS DAY 2025",
+            "text": "December 1st, 2025 – GenPur CBO joins the World Health Organization (WHO) and communities worldwide to commemorate World AIDS Day 2025 under the theme 'Overcoming disruption, transforming the AIDS response.'"
+          },
+          {
+            "heading": "Understanding HIV/AIDS: A Global Health Challenge",
+            "text": "Globally, an estimated 40.8 million people are living with HIV. Despite remarkable progress in treatment and prevention over the past decades, HIV/AIDS remains a significant public health challenge.\n\nToday, HIV is a manageable chronic condition. With proper antiretroviral therapy (ART), people living with HIV can lead long, healthy, and productive lives. However, many barriers still prevent people from accessing the care they need."
+          },
+          {
+            "heading": "The Biggest Obstacle: Stigma and Discrimination",
+            "text": "Stigma remains one of the most significant barriers to ending the AIDS epidemic. People living with HIV often face:\n\n• Discrimination in healthcare settings, workplaces, and communities\n• Social isolation and rejection by family and friends\n• Fear of disclosure preventing them from seeking testing or treatment\n• Judgment and blame rather than compassion and support\n• Barriers to employment, housing, and education\n\nThis stigma is rooted in misinformation, fear, and prejudice. Many people still don't understand how HIV is transmitted or that it's a manageable condition with treatment."
+          },
+          {
+            "heading": "Barriers to HIV Testing and Treatment",
+            "text": "Despite the availability of effective treatments, many people worldwide face obstacles to accessing HIV services:\n\n• Limited access to confidential testing services\n• Cost of medications and healthcare\n• Geographic barriers in rural or underserved areas\n• Lack of awareness about HIV prevention and treatment options\n• Fear of stigma preventing people from getting tested\n• Misinformation about how HIV is transmitted\n\nAddressing these barriers requires a comprehensive approach that combines education, healthcare access, and stigma reduction."
+          },
+          {
+            "heading": "HIV Prevention and Treatment: What You Need to Know",
+            "text": "Prevention:\n• Use protection during sexual activity\n• Get tested regularly and know your status\n• Pre-exposure prophylaxis (PrEP) can prevent HIV infection in high-risk individuals\n• Avoid sharing needles or other injection equipment\n• Pregnant women with HIV can prevent transmission to their babies with proper treatment\n\nTreatment:\n• Antiretroviral therapy (ART) suppresses the virus and allows people to live healthy lives\n• When viral load is undetectable, HIV cannot be transmitted sexually (U=U: Undetectable = Untransmittable)\n• Early diagnosis and treatment are crucial for the best outcomes\n• Treatment adherence is important for maintaining viral suppression\n\nRemember: HIV is NOT transmitted through casual contact, hugging, sharing food, or mosquito bites."
+          },
+          {
+            "heading": "16 DAYS OF ACTIVISM AGAINST GENDER-BASED VIOLENCE",
+            "text": ""
+          },
+          {
+            "heading": "Understanding Gender-Based Violence: A Global Crisis",
+            "text": "Violence against women and girls affects one in three women globally. It is a violation of human rights that occurs in every country, cutting across cultures, classes, education levels, income, ethnicity, and age.\n\nGender-based violence (GBV) takes many forms and can happen anywhere – in homes, workplaces, schools, public spaces, and increasingly, online. It causes profound physical, psychological, sexual, and economic harm to survivors and has lasting impacts on families and communities."
+          },
+          {
+            "heading": "Forms of Gender-Based Violence",
+            "text": "Physical Violence:\n• Hitting, slapping, kicking, beating\n• Burning, choking, or using weapons\n• Physical restraint or confinement\n\nSexual Violence:\n• Rape and sexual assault\n• Forced marriage\n• Sexual harassment\n• Human trafficking and exploitation\n\nEmotional and Psychological Abuse:\n• Intimidation, threats, and humiliation\n• Isolation from family and friends\n• Constant criticism and belittling\n• Controlling behavior and monitoring\n\nEconomic Violence:\n• Controlling access to money and resources\n• Preventing employment or education\n• Economic exploitation\n• Withholding financial support\n\nThese forms of violence often occur together and create patterns of control and abuse."
+          },
+          {
+            "heading": "Digital Violence: A Growing Threat",
+            "text": "As our world becomes increasingly connected, digital violence against women and girls has emerged as a serious and growing problem:\n\nTypes of Digital Violence:\n• Non-consensual sharing of intimate images (\"revenge porn\")\n• Cyberbullying, trolling, and online harassment\n• Online stalking and surveillance/tracking\n• Doxxing (publishing private information)\n• AI-generated deepfakes and manipulated images\n• Sexual harassment and threats via social media or messaging apps\n• Impersonation and catfishing\n• Using technology to monitor and control partners\n\nThe Impact:\nDigital violence doesn't just happen online – it has real-world consequences:\n• Psychological trauma, anxiety, and depression\n• Fear for personal safety\n• Damage to reputation and relationships\n• Barriers to employment and education\n• Can escalate to physical violence offline\n\nDigital violence is real violence. It destroys lives, silences voices, and denies women and girls their right to safety and dignity."
+          },
+          {
+            "heading": "Why Gender-Based Violence Persists",
+            "text": "Gender-based violence continues because of:\n\n• Unequal power relations between men and women in society\n• Harmful social norms that tolerate or excuse violence\n• Weak laws or lack of enforcement\n• Economic inequality and women's economic dependence\n• Lack of education about healthy relationships and consent\n• Normalization of violence in media and culture\n• Victim-blaming attitudes that shame survivors instead of perpetrators\n• Limited support services and resources for survivors\n\nFor Digital Violence Specifically:\n• Weak regulation of technology companies\n• Lack of accountability from social media platforms\n• Anonymity allowing perpetrators to hide\n• Cross-border nature making prosecution difficult\n• Many people don't recognize it as \"real\" violence"
+          },
+          {
+            "heading": "GenPur CBO's Commitment to HIV/AIDS Awareness",
+            "text": "At GenPur CBO, we believe that awareness is the foundation for change. We stand with global movements to:\n\n• Raise awareness about HIV prevention, testing, and treatment\n• Combat stigma and discrimination against people living with HIV\n• Promote compassion and dignity for all\n• Share accurate, evidence-based information\n• Support access to testing and treatment services\n\nWe believe every person deserves to live free from stigma and discrimination."
+          },
+          {
+            "heading": "GenPur CBO's Commitment to Ending Gender-Based Violence",
+            "text": "At GenPur CBO, we believe that awareness is the foundation for change. We stand with global movements to:\n\n• Educate communities about all forms of violence, including digital violence\n• Promote healthy, respectful relationships\n• Challenge harmful norms that perpetuate violence\n• Support survivors and advocate for their rights\n• Raise awareness about digital safety and online protection\n\nWe believe every person deserves to live free from violence and fear – in both physical and digital spaces."
+          },
+          {
+            "heading": "How You Can Take Action",
+            "text": "For HIV/AIDS Awareness:\n• Get tested: Know your HIV status and encourage others to do the same\n• End stigma: Treat people living with HIV with compassion, dignity, and respect\n• Educate yourself: Learn the facts about how HIV is transmitted and treated\n• Spread awareness: Share accurate information and challenge misinformation\n• Support access: Advocate for universal access to testing and treatment\n• Use #WorldAIDSDay to join the global conversation\n\nFor Ending Gender-Based Violence:\n• Believe survivors: Listen without judgment when someone shares their experience\n• Speak out: Don't stay silent when you witness harassment or abuse\n• Educate yourself and others: Learn about consent, healthy relationships, and digital safety\n• Support organizations: Donate to or volunteer with groups working to end violence\n• Challenge harmful attitudes: Speak up against victim-blaming and sexist jokes\n• Teach young people: Talk to children and youth about respect and boundaries\n• Practice digital safety: Protect your own privacy and respect others' online\n• Wear orange: Display the color of hope during the 16 Days of Activism\n• Use #NoExcuse, #ACTtoEndViolence, and #16Days to raise awareness\n\nIf You or Someone You Know Needs Help:\n• For HIV/AIDS: Contact your local health center for confidential testing and support\n• For violence: Reach out to local support services, hotlines, or trusted organizations\n• Remember: You are not alone. Help is available."
+          },
+          {
+            "heading": "Building a Future Free from HIV/AIDS Stigma",
+            "text": "HIV/AIDS is a manageable condition. Stigma and discrimination can and must be stopped.\n\nGenPur CBO stands with communities worldwide to raise awareness and work toward a future where all people can live healthy and dignified lives – free from stigma and discrimination.\n\nChange begins with awareness. It grows through education. It succeeds through action.\n\nTogether, we can create a world where:\n• People living with HIV receive compassion, not stigma\n• Everyone has access to testing and treatment\n• Accurate information replaces fear and misinformation\n• Human rights and dignity are protected\n\nEvery person matters. Every voice counts. Every action makes a difference.\n\nJoin us in raising awareness on World AIDS Day.\n\n#WorldAIDSDay"
+          },
+          {
+            "heading": "Building a Future Free from Gender-Based Violence",
+            "text": "Violence against women and girls is not inevitable. It can and must be stopped.\n\nGenPur CBO stands with communities worldwide to raise awareness and work toward a future where all people can live safe and dignified lives – free from violence and fear.\n\nChange begins with awareness. It grows through education. It succeeds through action.\n\nTogether, we can create a world where:\n• Women and girls live free from violence and fear\n• Digital spaces are safe for all\n• Survivors receive support, not judgment\n• Human rights and dignity are protected\n\nEvery person matters. Every voice counts. Every action makes a difference.\n\nJoin us in raising awareness. Stand with survivors. Support change.\n\n#NoExcuse #ACTtoEndViolence #16Days"
+          }
+        ]
+      },
+      "ctaText": "Support Our Health Awareness Programs",
+      "ctaLink": "donate.html"
+    }
+  ]
+}

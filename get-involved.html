@@ -92,12 +92,63 @@
         }
 
         .top-social-links a:last-child {
-            background-color: #1da1f2; /* Twitter blue */
+            background-color: #000000; /* X black */
         }
 
         .top-social-links a:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Override Twitter icon to display X */
+        .fa-twitter::before {
+            content: "𝕏" !important;
+            font-family: inherit !important;
+            font-weight: normal !important;
+            font-style: normal !important;
+        }
+
+        .footer-social-icons .fa-twitter::before {
+            content: "𝕏" !important;
+            font-family: inherit !important;
+            font-weight: normal !important;
+            font-style: normal !important;
+        }
+
+        /* Footer social icons styling */
+        .footer-social-icons {
+            margin-top: 20px;
+        }
+
+        .footer-social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 5px;
+            margin: 0 8px 8px 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .footer-social-icons a[title="Facebook"] {
+            background-color: #1877f2 !important;
+        }
+
+        .footer-social-icons a[title="Instagram"] {
+            background-color: #e4405f !important;
+        }
+
+        .footer-social-icons a[title="X"] {
+            background-color: #000000 !important;
+        }
+
+        .footer-social-icons a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            opacity: 0.9;
         }
 
         /* Adjust navbar position to account for top bar */
@@ -499,9 +550,19 @@
 
         .news-card-image {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
-            filter: grayscale(50%);
+            height: 360px;
+            object-fit: contain;
+            object-position: center center;
+            background-color: #f5f5f5;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .news-card-image.fade-out {
+            opacity: 0;
+        }
+
+        .news-card-image.fade-in {
+            opacity: 1;
         }
 
         .news-card-content {
@@ -644,7 +705,7 @@
                         <a href="#" title="Instagram" target="_blank">
                             <i class="fa fa-instagram"></i>
                         </a>
-                        <a href="#" title="Twitter" target="_blank">
+                        <a href="#" title="X" target="_blank">
                             <i class="fa fa-twitter"></i>
                         </a>
                     </div>
@@ -893,68 +954,7 @@
                 </div>
 
                 <div class="row" id="newsCardsRow">
-                    <!-- Article 1 -->
-                    <div class="col-md-4">
-                        <div class="news-card">
-                            <img src="img/news1.jpg" alt="Article 1" class="news-card-image">
-                            <div class="news-card-content">
-                                <div class="news-meta">
-                                    <span class="news-date">
-                                        <i class="fa fa-calendar"></i> July 16, 2024
-                                    </span>
-                                    <span class="news-category">
-                                        <i class="fa fa-tag"></i> Education
-                                    </span>
-                                </div>
-                                <h3>See Your Impact: Transparent Donation Tracking</h3>
-                                <a href="article1.html" class="btn-read-more">
-                                    Read More <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Article 2 -->
-                    <div class="col-md-4">
-                        <div class="news-card">
-                            <img src="img/news2.jpg" alt="Article 2" class="news-card-image">
-                            <div class="news-card-content">
-                                <div class="news-meta">
-                                    <span class="news-date">
-                                        <i class="fa fa-calendar"></i> March 24, 2024
-                                    </span>
-                                    <span class="news-category">
-                                        <i class="fa fa-tag"></i> Education
-                                    </span>
-                                </div>
-                                <h3>Every Contribution Counts: Make a Difference</h3>
-                                <a href="article2.html" class="btn-read-more">
-                                    Read More <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Article 3 -->
-                    <div class="col-md-4">
-                        <div class="news-card">
-                            <img src="img/news3.jpg" alt="Article 3" class="news-card-image">
-                            <div class="news-card-content">
-                                <div class="news-meta">
-                                    <span class="news-date">
-                                        <i class="fa fa-calendar"></i> June 30, 2024
-                                    </span>
-                                    <span class="news-category">
-                                        <i class="fa fa-tag"></i> Education
-                                    </span>
-                                </div>
-                                <h3>Real Stories, Real Impact: Your Donations at Work</h3>
-                                <a href="article3.html" class="btn-read-more">
-                                    Read More <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Articles will be loaded dynamically from JSON -->
                 </div>
             </div>
         </div>
@@ -988,9 +988,8 @@
 
                     <div class="footer-social-icons">
                         <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" title="X"><i class="fa fa-twitter"></i></a>
                         <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
-                        <a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -1071,6 +1070,84 @@
                 }, 0);
             });
         });
+
+        // Load articles from JSON
+        async function loadArticles() {
+            try {
+                // Add timestamp to bypass browser cache
+                const response = await fetch(`data/articles.json?t=${new Date().getTime()}`);
+                const data = await response.json();
+                const newsRow = document.getElementById('newsCardsRow');
+
+                data.articles.forEach(article => {
+                    const articleDate = new Date(article.publishedDate);
+                    const formattedDate = articleDate.toLocaleDateString('en-US', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                    });
+
+                    const articleCard = `
+                        <div class="col-md-4">
+                            <div class="news-card">
+                                <img src="${article.featuredImage}" alt="${article.title}" class="news-card-image" data-article-id="${article.id}">
+                                <div class="news-card-content">
+                                    <div class="news-meta">
+                                        <span class="news-date">
+                                            <i class="fa fa-calendar"></i> ${formattedDate}
+                                        </span>
+                                        <span class="news-category" style="color: ${article.categoryColor}">
+                                            <i class="fa fa-tag"></i> ${article.category}
+                                        </span>
+                                    </div>
+                                    <h3>${article.title}</h3>
+                                    <a href="article.html?slug=${article.slug}" class="btn-read-more">
+                                        Read More <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    newsRow.innerHTML += articleCard;
+
+                    // Setup slideshow for articles with multiple images
+                    if (article.featuredImages && article.featuredImages.length > 1) {
+                        setTimeout(() => {
+                            const imgElement = document.querySelector(`img[data-article-id="${article.id}"]`);
+                            if (imgElement) {
+                                let currentIndex = 0;
+                                const images = article.featuredImages;
+
+                                setInterval(() => {
+                                    currentIndex = (currentIndex + 1) % images.length;
+
+                                    // Fade out
+                                    imgElement.classList.add('fade-out');
+
+                                    // Change image after fade out
+                                    setTimeout(() => {
+                                        imgElement.src = images[currentIndex];
+                                        imgElement.classList.remove('fade-out');
+                                        imgElement.classList.add('fade-in');
+
+                                        // Remove fade-in class after animation
+                                        setTimeout(() => {
+                                            imgElement.classList.remove('fade-in');
+                                        }, 1000);
+                                    }, 1000);
+                                }, 4000); // Change image every 4 seconds
+                            }
+                        }, 100);
+                    }
+                });
+            } catch (error) {
+                console.error('Error loading articles:', error);
+            }
+        }
+
+        // Load articles when page loads
+        loadArticles();
 
         // News articles navigation
         let currentNewsIndex = 0;
