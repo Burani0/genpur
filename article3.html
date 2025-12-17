@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Real Stories, Real Impact: Your Donations at Work - GenPur CBO</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Source+Sans+Pro:400,700|Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        /* Article Styles */
+        .article-header {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            padding: 80px 0 60px;
+            margin-top: 65px;
+        }
+
+        .article-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 30px;
+            font-size: 16px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .article-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .article-meta-item i {
+            font-size: 18px;
+        }
+
+        .article-content {
+            padding: 60px 0;
+        }
+
+        .article-featured-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .article-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .article-text h2 {
+            color: #0066cc;
+            font-size: 32px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .article-text h3 {
+            color: #0066cc;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .article-text ul, .article-text ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .article-text li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .article-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #0066cc;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: color 0.3s;
+        }
+
+        .article-back-link:hover {
+            color: #7bc143;
+            text-decoration: none;
+        }
+
+        .article-share {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .article-share h4 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .share-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+            color: white;
+        }
+
+        .share-btn.facebook {
+            background: #3b5998;
+        }
+
+        .share-btn.twitter {
+            background: #1da1f2;
+        }
+
+        .share-btn.whatsapp {
+            background: #25d366;
+        }
+
+        .story-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 5px solid #7bc143;
+        }
+
+        .story-box h4 {
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 28px;
+            }
+
+            .article-featured-image {
+                height: 300px;
+            }
+
+            .article-text {
+                font-size: 16px;
+            }
+
+            .article-text h2 {
+                font-size: 24px;
+            }
+
+            .article-text h3 {
+                font-size: 20px;
+            }
+        }
+/* Override Twitter icon to display X */        .fa-twitter::before {            content: "𝕏" !important;            font-family: inherit !important;            font-weight: normal !important;            font-style: normal !important;        }        .footer-social-icons .fa-twitter::before {            content: "𝕏" !important;            font-family: inherit !important;            font-weight: normal !important;            font-style: normal !important;        }        /* Footer social icons styling */        .footer-social-icons a[title="Facebook"] {            background-color: #1877f2 !important;        }        .footer-social-icons a[title="Instagram"] {            background-color: #e4405f !important;        }        .footer-social-icons a[title="X"] {            background-color: #000000 !important;        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="top-bar-left">
+                        <span class="top-bar-item">
+                            <i class="fa fa-envelope"></i> info@genpur.org
+                        </span>
+                        <span class="top-bar-item">
+                            <i class="fa fa-phone"></i> +256 746 701 314
+                        </span>
+                        <span class="top-bar-item">
+                            <i class="fa fa-map-marker"></i> Amuru Town Council, Gulu
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-bar-right">
+                        <a href="https://facebook.com/genpur" target="_blank" class="social-icon">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/genpur" target="_blank" class="social-icon">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/genpur" target="_blank" class="social-icon">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="top: 33px;">
+        <div class="container">
+            <a href="index.html"><img class="logo navbar-brand image-responsive" src="img/1000475511.jpg" alt="Logo" style="border-radius: 90px;"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="navbar-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="education.html">Child Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="household.html">Household Strengthening</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="livelihood.html">Livelihood</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="sports.html">Coaching Boys into Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="get-involved.html" class="btn btn-get-involved">Get Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="donate.html" class="btn btn-get-involved" style="background: #ffa500;">Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <h1 class="article-title">Real Stories, Real Impact: Your Donations at Work</h1>
+            <div class="article-meta">
+                <span class="article-meta-item">
+                    <i class="fa fa-calendar"></i>
+                    June 30, 2024
+                </span>
+                <span class="article-meta-item">
+                    <i class="fa fa-tag"></i>
+                    Education
+                </span>
+                <span class="article-meta-item">
+                    <i class="fa fa-user"></i>
+                    GenPur CBO Team
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="article-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <a href="get-involved.html" class="article-back-link">
+                        <i class="fa fa-arrow-left"></i> Back to Articles
+                    </a>
+
+                    <img src="img/news3.jpg" alt="Real Stories Real Impact" class="article-featured-image">
+
+                    <div class="article-text">
+                        <p>
+                            Behind every statistic, every number, and every report lies a human story - a life touched, a future changed, a dream made possible. At GenPur CBO, we believe in the power of storytelling because stories connect us, inspire us, and show us the real impact of generosity. Today, we're sharing the stories of real people whose lives have been transformed by your donations.
+                        </p>
+
+                        <h2>Stories That Change Everything</h2>
+                        <p>
+                            When donors contribute to GenPur CBO, they're not just giving money - they're investing in people, in communities, in futures. Here are just a few of the countless stories your donations have made possible.
+                        </p>
+
+                        <div class="story-box">
+                            <h4>Grace's Journey: From Dropout to Dream</h4>
+                            <p>
+                                <strong>Age:</strong> 14 years old<br>
+                                <strong>Location:</strong> Amuru District<br>
+                                <strong>Program:</strong> Child Education Support
+                            </p>
+                            <p>
+                                Grace dropped out of school in Primary 5 when her father passed away and her mother couldn't afford the school fees. For two years, she stayed home, helping with farm work and taking care of her younger siblings. Her dream of becoming a nurse seemed impossible.
+                            </p>
+                            <p>
+                                Then GenPur CBO, through donor support, stepped in. Your contributions provided Grace with school fees, uniforms, and supplies. Today, she's back in school, excelling in her studies, and on track to join secondary school next year. Her mother says, "My daughter has her smile back. She has hope again."
+                            </p>
+                            <p>
+                                <strong>Impact:</strong> 1 child sponsored, 1 family given hope, 1 future nurse on her way.
+                            </p>
+                        </div>
+
+                        <div class="story-box">
+                            <h4>The Akello Family: Financial Independence Through VSLA</h4>
+                            <p>
+                                <strong>Members:</strong> 6 family members<br>
+                                <strong>Location:</strong> Pabbo Sub-county<br>
+                                <strong>Program:</strong> Village Savings & Loan Associations
+                            </p>
+                            <p>
+                                The Akello family struggled to make ends meet through subsistence farming. When Grace Akello joined a VSLA group supported by GenPur CBO, everything changed. Through weekly savings and access to small loans, she started a small business selling vegetables at the local market.
+                            </p>
+                            <p>
+                                Within one year, her business grew. She saved enough to buy three goats, which have now multiplied to seven. Her husband learned modern farming techniques through our agricultural training program. Today, the family has enough food, can afford their children's school fees, and even helps other families in their community.
+                            </p>
+                            <p>
+                                <strong>Impact:</strong> 1 family empowered, 3 children in school, 1 thriving small business, countless others inspired.
+                            </p>
+                        </div>
+
+                        <div class="story-box">
+                            <h4>Patrick's Transformation: From Troubled Teen to Team Leader</h4>
+                            <p>
+                                <strong>Age:</strong> 16 years old<br>
+                                <strong>Location:</strong> Amuru Town<br>
+                                <strong>Program:</strong> Coaching Boys into Men (Sports)
+                            </p>
+                            <p>
+                                Patrick was heading down a dangerous path - skipping school, getting into fights, and running with the wrong crowd. His mother was desperate. When he joined our Coaching Boys into Men sports program, supported by donors like you, his life took a dramatic turn.
+                            </p>
+                            <p>
+                                Through football training and mentorship, Patrick learned discipline, teamwork, and respect. He discovered talents he didn't know he had. Today, he's the captain of his school's football team, his grades have improved significantly, and he mentors younger boys in the program.
+                            </p>
+                            <p>
+                                <strong>Impact:</strong> 1 life redirected, 1 leader developed, countless younger boys inspired.
+                            </p>
+                        </div>
+
+                        <h2>Your Donations Create Ripple Effects</h2>
+                        <p>
+                            These stories demonstrate something powerful: when you help one person, you impact an entire community. Grace's education inspires her siblings. The Akello family's success motivates their neighbors. Patrick's transformation influences every boy he mentors.
+                        </p>
+
+                        <h3>By the Numbers: Your Impact in 2024</h3>
+                        <ul>
+                            <li><strong>200+ farmers</strong> trained in modern agriculture and VSLA financial literacy</li>
+                            <li><strong>15 children</strong> sponsored with complete educational support</li>
+                            <li><strong>300 caregivers</strong> reached with positive parenting training</li>
+                            <li><strong>160+ boys</strong> participating in sports and mentorship programs</li>
+                            <li><strong>25 VSLA groups</strong> actively saving and lending in their communities</li>
+                        </ul>
+
+                        <h2>The Ongoing Story: Your Role</h2>
+                        <p>
+                            These stories are real. These transformations are happening. And they're only possible because of donors like you who believe in the power of giving, who trust GenPur CBO to use resources wisely, and who understand that change happens one person, one family, one community at a time.
+                        </p>
+                        <p>
+                            Every story we've shared today started with someone like you making a donation. Every future success story waiting to be written depends on the generosity of donors who choose to invest in human potential.
+                        </p>
+
+                        <h3>Be Part of the Next Story</h3>
+                        <p>
+                            There are hundreds more stories waiting to be written - children waiting to go to school, families ready to break free from poverty, young people needing mentorship and guidance. Your donation today could be the beginning of someone's transformation story.
+                        </p>
+                        <p>
+                            Will you be part of the next chapter? <a href="donate.html">Make your donation today</a> and become part of a story that changes lives, strengthens communities, and builds a brighter future for Northern Uganda.
+                        </p>
+
+                        <!-- Share Section -->
+                        <div class="article-share">
+                            <h4>Share This Article</h4>
+                            <div class="share-buttons">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/article3.html" target="_blank" class="share-btn facebook">
+                                    <i class="fa fa-facebook"></i> Facebook
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com/article3.html&text=Real Stories, Real Impact: Your Donations at Work" target="_blank" class="share-btn twitter">
+                                    <i class="fa fa-twitter"></i> Twitter
+                                </a>
+                                <a href="https://wa.me/?text=Real Stories, Real Impact: Your Donations at Work https://yourwebsite.com/article3.html" target="_blank" class="share-btn whatsapp">
+                                    <i class="fa fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/1000475511.jpg" alt="GenPur Logo" class="footer-logo">
+                    <p>GenPur CBO is dedicated to improving lives through education, health, economic empowerment, and sports development in Amuru District.</p>
+                </div>
+
+                <div class="col-md-4 footer-menu">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="education.html">Child Education</a></li>
+                        <li><a href="household.html">Household Strengthening</a></li>
+                        <li><a href="livelihood.html">Livelihood</a></li>
+                        <li><a href="sports.html">Coaching Boys into Men</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-contact">
+                    <h4>CONTACT US</h4>
+                    <p><i class="fa fa-map-marker"></i> Amuru Town Council, Gulu, Uganda</p>
+                    <p><i class="fa fa-phone"></i> +256 746 701 314</p>
+                    <p><i class="fa fa-envelope"></i> info@genpur.org</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/genpur" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/genpur" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://instagram.com/genpur" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 GenPur CBO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

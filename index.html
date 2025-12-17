@@ -598,7 +598,15 @@
 }
 
 .top-social-links a:last-child {
-    background-color: #1da1f2; /* Twitter blue */
+    background-color: #000000; /* Black for X */
+}
+
+/* Override Twitter icon to display X in top bar */
+.top-social-links .fa-twitter::before {
+    content: "𝕏" !important;
+    font-family: inherit !important;
+    font-weight: normal !important;
+    font-style: normal !important;
 }
 
 .top-social-links a:hover {
@@ -758,6 +766,208 @@ body {
     left: 0;
     transform: translate3d(0, 0, 0);
 }
+
+/* Carousel Zoom Effect - Ken Burns Style */
+@keyframes slowZoomOut {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.carousel-zoom .carousel-inner {
+    background-color: #1a1a1a;
+}
+
+.carousel-zoom .carousel-item {
+    overflow: hidden;
+    background-color: #1a1a1a;
+}
+
+.carousel-zoom .carousel-item img {
+    animation: slowZoomOut 8s linear infinite;
+    transform-origin: center center;
+}
+
+.carousel-zoom .carousel-inner .carousel-item {
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.carousel-zoom .carousel-inner .carousel-item.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel-zoom .carousel-inner .carousel-item.active img {
+    animation: slowZoomOut 8s linear infinite;
+}
+
+.carousel-zoom .carousel-inner .carousel-item-next,
+.carousel-zoom .carousel-inner .carousel-item-prev {
+    opacity: 0;
+}
+
+.carousel-zoom .carousel-inner .carousel-item-next.carousel-item-left,
+.carousel-zoom .carousel-inner .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+}
+
+.carousel-zoom .carousel-inner .carousel-item.active.carousel-item-left,
+.carousel-zoom .carousel-inner .carousel-item.active.carousel-item-right {
+    opacity: 0;
+}
+
+/* Mobile Responsiveness for Index Page */
+@media (max-width: 767px) {
+    .pillars-section .main-title {
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+
+    .pillars-section .subtitle {
+        font-size: 18px;
+    }
+
+    .pillars-section .description {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    .pillar-icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .pillar-icon i {
+        font-size: 45px;
+    }
+
+    .pillar-title {
+        font-size: 18px;
+        min-height: auto;
+    }
+
+    .pillar-description {
+        font-size: 14px;
+        min-height: auto;
+    }
+
+    .impact-section {
+        padding: 40px 0;
+    }
+
+    .impact-section .section-title {
+        font-size: 26px;
+    }
+
+    .impact-card {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        min-height: auto;
+        padding: 20px 15px;
+    }
+
+    .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .scroll-top-btn i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pillars-section {
+        padding: 40px 0;
+    }
+
+    .pillars-section .main-title {
+        font-size: 22px;
+    }
+
+    .pillars-section .subtitle {
+        font-size: 16px;
+    }
+
+    .pillars-section .description {
+        font-size: 13px;
+    }
+
+    .pillar-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pillar-icon i {
+        font-size: 40px;
+    }
+
+    .pillar-title {
+        font-size: 16px;
+    }
+
+    .pillar-description {
+        font-size: 13px;
+    }
+
+    .impact-section {
+        padding: 30px 0;
+    }
+
+    .impact-section .section-title {
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+
+    .impact-card {
+        padding: 15px 10px;
+    }
+
+    .scroll-top-btn {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .scroll-top-btn i {
+        font-size: 16px;
+    }
+}
+
+/* Override Twitter icon to display X */
+.fa-twitter::before {
+    content: "𝕏" !important;
+    font-family: inherit !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+.footer-social-icons .fa-twitter::before {
+    content: "𝕏" !important;
+    font-family: inherit !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+/* Footer social icons styling */
+.footer-social-icons a[title="Facebook"] {
+    background-color: #1877f2 !important;
+}
+
+.footer-social-icons a[title="Instagram"] {
+    background-color: #e4405f !important;
+}
+
+.footer-social-icons a[title="X"] {
+    background-color: #000000 !important;
+}
     </style>
 </head>
 
@@ -778,56 +988,31 @@ body {
                     <i class="fa fa-map-marker"></i> Amuru Town Council, Gulu
                 </span>
             </div>
-            <div class="col-md-3 top-bar-right">
-                <div class="top-social-links">
-                    <a href="#" title="Facebook" target="_blank">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="#" title="Instagram" target="_blank">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                    <a href="#" title="Twitter" target="_blank">
-                        <i class="fa fa-twitter"></i>
-                    </a>
+            <div class="col-md-3 text-right">
+                <div class="top-social-links" style="justify-content: flex-end;">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-md bg-light fixed-top navbar-default">
-
+    <nav class="navbar navbar-expand-md bg-light fixed-top">
         <div class="container">
-            <a href="index.html"><img class="logo navbar-brand image-responsive" src="img/1000475511.jpg" alt="Logo" style="border-radius: 90px;"></a>  
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                    <i class="fa fa-navicon"></i>
-                </span>
+            <a href="index.html"><img class="logo navbar-brand" src="img/1000475511.jpg" alt="Logo" style="border-radius: 90px; height: 60px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"><i class="fa fa-navicon"></i></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="navbar-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-link" href="education.html">Child Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-link" href="household.html">Household Strengthening</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-link" href="livelihood.html">Livelihood</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-link" href="sports.html">Coaching Boys to Men</a>
-                    </li>
-
-                    <li class="nav-item">
-                    <a href="get-involved.html" class="btn btn-get-involved">Get Involved</a>
-                </li>
-                    <li class="nav-item">
-                    <a href="donate.html" class="btn btn-get-involved" style="background: #ffa500;">Donate</a>
-                </li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="navbar-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="navbar-link" href="education.html">Child Education</a></li>
+                    <li class="nav-item"><a class="navbar-link" href="household.html">Household Strengthening</a></li>
+                    <li class="nav-item"><a class="navbar-link" href="livelihood.html">Livelihood</a></li>
+                    <li class="nav-item"><a class="navbar-link" href="sports.html">Coaching Boys into Men</a></li>
+                    <li class="nav-item"><a href="get-involved.html" class="btn btn-get-involved">Get Involved</a></li>
+                    <li class="nav-item"><a href="donate.html" class="btn btn-get-involved" style="background: #ffa500;">Donate</a></li>
                 </ul>
        
             </div>  
@@ -835,7 +1020,7 @@ body {
         <!-- /.container -->
 </nav>
 <section id="home">
-    <div class="carousel slide carousel-fade" id="MagicCarousel" data-ride="carousel" data-interval="2000">
+    <div class="carousel slide carousel-zoom" id="MagicCarousel" data-ride="carousel" data-interval="5000" data-wrap="true">
         <div class="carousel-inner" role="listbox">
             <ol class="carousel-indicators">
                 <li class="active" data-target="#MagicCarousel" data-slide-to="0"></li>
@@ -1010,9 +1195,9 @@ Use sports as a tool for mentorship, character building, and positive masculinit
                 <div class="col-md-6 col-lg-3">
                     <div class="impact-card">
                         <h3 class="impact-category">Livelihood & Economic Empowerment</h3>
-                        <div class="impact-number">4</div>
+                        <div class="impact-number">200</div>
                         <p class="impact-description">
-                            Forests Restored Forest works and community participation & mobilisation
+                            Farmers trained on VSLA model and financial literacy
                         </p>
                     </div>
                 </div>
@@ -1041,24 +1226,6 @@ Use sports as a tool for mentorship, character building, and positive masculinit
                     </div>
                 </div>
 
-                <!-- Livelihood & Economic Empowerment - Second Metric -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="impact-card">
-                        <p class="impact-description">
-                            Trees planted and Grown in subcounties or serving communities
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Sports / Coaching Boys into Men - Second Metric -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="impact-card">
-                        <div class="impact-number">500</div>
-                        <p class="impact-description">
-                            Inclusive Communities Through community Participation in sports
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1128,6 +1295,7 @@ Use sports as a tool for mentorship, character building, and positive masculinit
             <div class="row">
                 <!-- Connect With Us -->
                 <div class="col-md-4">
+                    <img src="img/1000475511.jpg" alt="Logo" class="footer-logo" style="margin-bottom: 15px; width: 80px; height: auto;">
                     <h4>CONNECT WITH US</h4>
                     <p><i class="fa fa-phone"></i> +256 746 701 314</p>
                     <p><i class="fa fa-envelope"></i> info@genpur.org</p>
@@ -1136,7 +1304,7 @@ Use sports as a tool for mentorship, character building, and positive masculinit
                     <div class="footer-social-icons">
                         <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
                         <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
-                        <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" title="X"><i class="fa fa-twitter"></i></a>
                     </div>
                 </div>
 
@@ -1147,7 +1315,7 @@ Use sports as a tool for mentorship, character building, and positive masculinit
                         <li><a href="education.html">Child Education</a></li>
                         <li><a href="household.html">Household Strengthening</a></li>
                         <li><a href="livelihood.html">Livelihood</a></li>
-                        <li><a href="sports.html">Coaching Boys to Men</a></li>
+                        <li><a href="sports.html">Coaching Boys into Men</a></li>
                     </ul>
                 </div>
 
@@ -1343,14 +1511,22 @@ $('#MagicCarousel').on('slide.bs.carousel', function (e) {
 // Initialize on page load
 $(document).ready(function() {
     animateCarouselText();
-    
+
+    // Initialize carousel with explicit settings
+    $('#MagicCarousel').carousel({
+        interval: 5000,
+        wrap: true,
+        ride: 'carousel',
+        pause: false
+    });
+
     // Trigger animation for first slide
     const firstCaption = $('.carousel-item.active .carousel-caption h1');
     if (firstCaption.length) {
         const text = firstCaption.text();
         firstCaption.data('original-text', text);
         firstCaption.html('');
-        
+
         const characters = text.split('');
         characters.forEach((char, index) => {
             const span = document.createElement('span');

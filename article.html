@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title id="pageTitle">Loading... - GenPur CBO</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        /* Top Bar Styles */
+        .top-bar {
+            background: linear-gradient(90deg, #0066cc 0%, #0052a3 100%);
+            color: #fff;
+            padding: 8px 0;
+            font-size: 13px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1031;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-bar-item {
+            color: #fff;
+            margin-right: 20px;
+            display: inline-flex;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .top-bar-item i {
+            margin-right: 6px;
+            color: #ffd700;
+            font-size: 14px;
+        }
+
+        .top-social-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .top-social-links a {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .top-social-links a i {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .top-social-links a:first-child {
+            background-color: #1877f2;
+        }
+
+        .top-social-links a:nth-child(2) {
+            background-color: #e4405f;
+        }
+
+        .top-social-links a:last-child {
+            background-color: #000000;
+        }
+
+        .top-social-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Override Twitter icon to display X */
+        .fa-twitter::before {
+            content: "𝕏" !important;
+            font-family: inherit !important;
+            font-weight: normal !important;
+            font-style: normal !important;
+        }
+
+        /* Adjust navbar position to account for top bar */
+        .navbar {
+            margin-top: 48px;
+        }
+
+        /* Responsive adjustments for top bar */
+        @media (max-width: 991px) {
+            .top-bar-left {
+                flex-direction: column;
+                align-items: flex-start !important;
+                gap: 5px;
+            }
+
+            .top-bar-item {
+                margin-right: 15px;
+                font-size: 12px;
+            }
+
+            .top-social-links {
+                margin-top: 5px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                padding: 10px 0;
+            }
+
+            .top-bar .container {
+                flex-direction: column;
+                align-items: flex-start !important;
+                gap: 10px;
+            }
+
+            .top-bar-left, .top-bar-right {
+                width: 100%;
+            }
+
+            .top-social-links {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Article Styles */
+        .article-header {
+            background: white;
+            color: #333;
+            padding: 40px 0 20px;
+            margin-top: 113px;
+        }
+
+        .article-title {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+            color: #666;
+        }
+
+        .article-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .article-meta-item i {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .article-content {
+            padding: 30px 0 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .article-featured-image {
+            width: 100%;
+            max-height: 400px;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 0px;
+            margin-bottom: 10px;
+            box-shadow: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .image-caption {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .article-excerpt {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 25px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .article-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 20px;
+
+            
+            
+
+        .article-text h2 {
+            color: #333;
+            font-size: 26px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .article-text h3 {
+            color: #333;
+            font-size: 22px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .article-text p {
+            margin-bottom: 18px;
+        }
+
+        .article-quote {
+            font-style: italic;
+            color: #555;
+            padding: 15px 25px;
+            background: #f9f9f9;
+            border-left: 4px solid #7bc143;
+            margin: 25px 0;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .article-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #0066cc;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .article-back-link:hover {
+            color: #7bc143;
+            transform: translateX(-5px);
+        }
+
+        .article-cta-section {
+            background: #f8f9fa;
+            padding: 60px 50px;
+            border-radius: 0px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .article-cta-section h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #0066cc;
+        }
+
+        .article-cta-section p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .article-cta-section .btn-cta {
+            background: #7bc143;
+            color: white;
+            padding: 15px 50px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .article-cta-section .btn-cta:hover {
+            background: #5fa32d;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(123, 193, 67, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .article-header {
+                padding: 60px 0 40px;
+            }
+
+            .article-title {
+                font-size: 28px;
+            }
+
+            .article-featured-image {
+                height: 300px;
+            }
+
+            .article-cta-section {
+                padding: 30px 20px;
+            }
+
+            .article-cta-section h3 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 top-bar-left d-flex align-items-center">
+                    <span class="top-bar-item">
+                        <i class="fa fa-phone"></i> +256 746 701 314
+                    </span>
+                    <span class="top-bar-item">
+                        <i class="fa fa-envelope"></i> info@genpur.org
+                    </span>
+                </div>
+                <div class="col-md-4 top-bar-right d-flex justify-content-end">
+                    <div class="top-social-links">
+                        <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="#" title="X"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation (same as other pages) -->
+    <nav class="navbar navbar-expand-md bg-light fixed-top navbar-default">
+        <div class="container">
+            <a href="index.html"><img class="logo navbar-brand image-responsive" src="img/1000475511.jpg" alt="Logo" style="border-radius: 90px;"></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-navicon"></i>
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="navbar-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="education.html">Child Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="household.html">Household Strengthening</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="livelihood.html">Livelihood</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link" href="sports.html">Coaching Boys into Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="get-involved.html" class="btn btn-get-involved">Get Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="donate.html" class="btn btn-get-involved" style="background: #ffa500;">Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <h1 class="article-title" id="articleTitle">Loading...</h1>
+            <div class="article-meta">
+                <div class="article-meta-item">
+                    <i class="fa fa-calendar"></i>
+                    <span id="articleDate">Loading...</span>
+                </div>
+                <div class="article-meta-item">
+                    <i class="fa fa-tag"></i>
+                    <span id="articleCategory">Loading...</span>
+                </div>
+                <div class="article-meta-item">
+                    <i class="fa fa-user"></i>
+                    <span id="articleAuthor">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="article-content">
+        <div class="container">
+            <a href="get-involved.html" class="article-back-link">
+                <i class="fa fa-arrow-left"></i> Back to Articles
+            </a>
+
+            <img id="articleImage" src="" alt="" class="article-featured-image">
+
+            <div class="article-text" id="articleContent">
+                <p>Loading article...</p>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="article-cta-section" id="articleCTA">
+                <h3 id="ctaText">Loading...</h3>
+                <p>Your support transforms lives. Every contribution helps provide school fees, materials, and mentorship to vulnerable children in Amuru.</p>
+                <a href="#" id="ctaLink" class="btn-cta" style="background: #7bc143; color: white; padding: 15px 50px; font-size: 18px; font-weight: 600; border-radius: 50px; text-decoration: none; display: inline-block; transition: all 0.3s ease;">Support Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as other pages) -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/1000475511.jpg" alt="GenPur Logo" class="footer-logo">
+                    <p>GenPur CBO is dedicated to improving lives through education, health, economic empowerment, and sports development in Amuru District.</p>
+                </div>
+
+                <div class="col-md-4 footer-menu">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-menu">
+                    <h4>Connect With Us</h4>
+                    <p><i class="fa fa-phone"></i> +256 746 701 314</p>
+                    <p><i class="fa fa-envelope"></i> info@genpur.org</p>
+                    <p><i class="fa fa-map-marker"></i> Amuru Town Council, Gulu</p>
+
+                    <div class="footer-social-icons">
+                        <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" title="X"><i class="fa fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <p>&copy; 2025 GenPur CBO. All Rights Reserved. | Empowering Communities in Amuru District</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery, Popper, Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        // Get slug from URL parameter
+        function getSlugFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('slug');
+        }
+
+        // Load article content
+        async function loadArticle() {
+            const slug = getSlugFromURL();
+
+            if (!slug) {
+                window.location.href = 'get-involved.html';
+                return;
+            }
+
+            try {
+                const response = await fetch(`data/articles.json?t=${new Date().getTime()}`);
+                const data = await response.json();
+                const article = data.articles.find(a => a.slug === slug);
+
+                if (!article) {
+                    window.location.href = 'get-involved.html';
+                    return;
+                }
+
+                // Update page title
+                document.getElementById('pageTitle').textContent = article.title + ' - GenPur CBO';
+
+                // Update header
+                document.getElementById('articleTitle').textContent = article.title;
+
+                const articleDate = new Date(article.publishedDate);
+                document.getElementById('articleDate').textContent = articleDate.toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+
+                const categoryElement = document.getElementById('articleCategory');
+                categoryElement.textContent = article.category;
+                categoryElement.style.color = article.categoryColor;
+
+                document.getElementById('articleAuthor').textContent = article.author;
+
+                // Update featured image
+                const imgElement = document.getElementById('articleImage');
+                imgElement.src = article.featuredImage;
+                imgElement.alt = article.title;
+
+                // Setup slideshow if article has multiple images
+                if (article.featuredImages && article.featuredImages.length > 1) {
+                    let currentIndex = 0;
+                    const images = article.featuredImages;
+
+                    setInterval(() => {
+                        currentIndex = (currentIndex + 1) % images.length;
+                        imgElement.style.opacity = '0';
+
+                        setTimeout(() => {
+                            imgElement.src = images[currentIndex];
+                            imgElement.style.opacity = '1';
+                        }, 500);
+                    }, 4000); // Change image every 4 seconds
+                }
+
+                // Update content
+                let contentHTML = '';
+                if (article.excerpt) {
+                    contentHTML += `<p class="article-excerpt">${article.excerpt}</p>`;
+                }
+
+                article.content.sections.forEach(section => {
+                    contentHTML += `<h3>${section.heading}</h3>`;
+
+                    // Split text by newlines and create paragraphs
+                    const paragraphs = section.text.split('\n\n');
+                    paragraphs.forEach(para => {
+                        if (para.trim()) {
+                            // Check if paragraph starts with a quote
+                            if (para.trim().startsWith('"')) {
+                                contentHTML += `<div class="article-quote">${para.trim()}</div>`;
+                            } else {
+                                contentHTML += `<p>${para.trim()}</p>`;
+                            }
+                        }
+                    });
+
+                    // Add section image after text if it exists
+                    if (section.image) {
+                        contentHTML += `<img src="${section.image}" alt="${section.heading}" class="section-image" style="width: 100%; max-width: 600px; height: auto; margin: 20px 0; border-radius: 8px;">`;
+                    }
+
+                    // Add section video after text if it exists
+                    if (section.video) {
+                        contentHTML += `<video controls style="width: 100%; max-width: 600px; height: auto; margin: 20px 0; border-radius: 8px;">
+                            <source src="${section.video}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>`;
+                    }
+                });
+
+                document.getElementById('articleContent').innerHTML = contentHTML;
+
+                // Update CTA
+                document.getElementById('ctaText').textContent = article.ctaText;
+                document.getElementById('ctaLink').href = article.ctaLink;
+
+            } catch (error) {
+                console.error('Error loading article:', error);
+                document.getElementById('articleContent').innerHTML = `
+                    <p>Sorry, there was an error loading this article.</p>
+                    <p><a href="get-involved.html">Return to Articles</a></p>
+                `;
+            }
+        }
+
+        // Load article when page loads
+        loadArticle();
+    </script>
+</body>
+</html>
