@@ -601,16 +601,28 @@ footer .col-md-4 {
 }
 
 .footer-social-icons a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
-    line-height: 40px;
     border-radius: 5px;
     margin: 0 8px 8px 0;
-    text-align: center;
     transition: all 0.3s ease;
     color: #fff;
     font-size: 16px;
+}
+
+.footer-social-icons a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle;
 }
 
 /* Individual brand colors for footer social icons */
@@ -632,6 +644,14 @@ footer .col-md-4 {
 
 .footer-social-icons a[title="LinkedIn"] {
     background-color: #0077b5 !important;
+}
+
+/* Center all Font Awesome icons in footer */
+.footer-social-icons a i::before {
+    display: block;
+    text-align: center;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 /* Override Twitter icon to display X */

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Link Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+        body { padding: 50px; font-family: Arial; }
+        .icon-link {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .icon-link:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Test Links to GenPur X Account</h2>
+    
+    <h3>Test 1: Plain text link</h3>
+    <a href="https://x.com/GenPurOrg" target="_blank">Click here to go to GenPur X</a>
+    
+    <h3>Test 2: Link with icon (like on your site)</h3>
+    <a href="https://x.com/GenPurOrg" target="_blank" class="icon-link">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+    <h3>Test 3: Button</h3>
+    <a href="https://x.com/GenPurOrg" target="_blank">
+        <button>Go to GenPur X</button>
+    </a>
+    
+    <p><strong>Instructions:</strong> Try clicking each test link above. If Test 1 works but Test 2 doesn't, there's a CSS issue with the icon.</p>
+</body>
+</html>

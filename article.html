@@ -345,8 +345,8 @@
                 <div class="col-md-4 top-bar-right d-flex justify-content-end">
                     <div class="top-social-links">
                         <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
-                        <a href="#" title="X"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/genpurorganization_" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="https://x.com/GenPurOrg" target="_blank" title="X"><i class="fa fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
@@ -461,8 +461,8 @@
 
                     <div class="footer-social-icons">
                         <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" title="X"><i class="fa fa-twitter"></i></a>
-                        <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="https://x.com/GenPurOrg" target="_blank" title="X"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/genpurorganization_" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -497,7 +497,7 @@
             }
 
             try {
-                const response = await fetch(`data/articles.json?t=${new Date().getTime()}`);
+                const response = await fetch('data/articles.json');
                 const data = await response.json();
                 const article = data.articles.find(a => a.slug === slug);
 
@@ -571,14 +571,6 @@
                     // Add section image after text if it exists
                     if (section.image) {
                         contentHTML += `<img src="${section.image}" alt="${section.heading}" class="section-image" style="width: 100%; max-width: 600px; height: auto; margin: 20px 0; border-radius: 8px;">`;
-                    }
-
-                    // Add section video after text if it exists
-                    if (section.video) {
-                        contentHTML += `<video controls style="width: 100%; max-width: 600px; height: auto; margin: 20px 0; border-radius: 8px;">
-                            <source src="${section.video}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>`;
                     }
                 });
 
