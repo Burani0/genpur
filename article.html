@@ -570,7 +570,14 @@
 
                     // Add section image after text if it exists
                     if (section.image) {
-                        contentHTML += `<img src="${section.image}" alt="${section.heading}" class="section-image" style="width: 100%; max-width: 600px; height: auto; margin: 20px 0; border-radius: 8px;">`;
+                        const maxWidth = section.imageCaption ? '400px' : '600px';
+                        const imageStyle = section.imageCaption
+                            ? 'width: 100%; max-width: 400px; height: 700px; object-fit: cover; object-position: center 35%; border-radius: 8px;'
+                            : 'width: 100%; max-width: 600px; height: auto; border-radius: 8px;';
+                        contentHTML += `<div style="text-align: center; margin: 20px 0;">
+                            <img src="${section.image}" alt="${section.heading}" class="section-image" style="${imageStyle}">
+                            ${section.imageCaption ? `<p style="font-style: italic; color: #666; font-size: 14px; margin-top: 8px;">${section.imageCaption}</p>` : ''}
+                        </div>`;
                     }
 
                     // Add section video after text if it exists
