@@ -1556,3 +1556,69 @@ footer .col-md-4 {
         font-size: 35px;
     }
 }
+/* Mobile Heading Styles - Smaller Titles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 18px !important;
+        line-height: 26px !important;
+    }
+
+    h2 {
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+
+    h3 {
+        font-size: 15px !important;
+        line-height: 22px !important;
+    }
+
+    h4 {
+        font-size: 14px !important;
+        line-height: 20px !important;
+    }
+
+    h5, h6 {
+        font-size: 13px !important;
+        line-height: 18px !important;
+    }
+
+    .section-title {
+        font-size: 20px !important;
+    }
+
+    .title-section {
+        font-size: 18px !important;
+    }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+
+    h2 {
+        font-size: 14px !important;
+        line-height: 22px !important;
+    }
+
+    h3 {
+        font-size: 13px !important;
+        line-height: 20px !important;
+    }
+
+    h4 {
+        font-size: 12px !important;
+        line-height: 18px !important;
+    }
+
+    .section-title {
+        font-size: 18px !important;
+    }
+
+    .title-section {
+        font-size: 16px !important;
+    }
+}
